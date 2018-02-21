@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E2AB53A203D069E00310FB0 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AB539203D069E00310FB0 /* Shop.swift */; };
+		7E2AB53C203D247300310FB0 /* ShopRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AB53B203D247300310FB0 /* ShopRequest.swift */; };
 		7E364C3F203C175100C762CD /* AreaMiddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C3E203C175100C762CD /* AreaMiddle.swift */; };
 		7E364C41203C176200C762CD /* AreaSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C40203C176100C762CD /* AreaSmall.swift */; };
 		7E364C43203C1BD500C762CD /* AreaSubInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C42203C1BD500C762CD /* AreaSubInfo.swift */; };
@@ -38,11 +40,8 @@
 		7E67A2822034064400CCAC48 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67A2812034064400CCAC48 /* BaseRequest.swift */; };
 		7E67A28C203407D200CCAC48 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E67A284203407D100CCAC48 /* RxBlocking.framework */; };
 		7E67A28D203407D200CCAC48 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E67A285203407D100CCAC48 /* RxCocoa.framework */; };
-		7E67A28E203407D200CCAC48 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E67A286203407D100CCAC48 /* Himotoki.framework */; };
 		7E67A28F203407D200CCAC48 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E67A287203407D200CCAC48 /* Alamofire.framework */; };
 		7E67A290203407D200CCAC48 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E67A288203407D200CCAC48 /* RxSwift.framework */; };
-		7E67A291203407D200CCAC48 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E67A289203407D200CCAC48 /* Result.framework */; };
-		7E67A293203407D200CCAC48 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E67A28B203407D200CCAC48 /* APIKit.framework */; };
 		7E67A29520340AE700CCAC48 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67A29420340AE700CCAC48 /* HttpClient.swift */; };
 		7E67A29B203417D100CCAC48 /* CurrentLocationDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67A29A203417D100CCAC48 /* CurrentLocationDataStore.swift */; };
 		7E67A29D20343D9A00CCAC48 /* InputAddressUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67A29C20343D9A00CCAC48 /* InputAddressUsecase.swift */; };
@@ -56,6 +55,8 @@
 		7EBC2BDE2032B19600C65F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC2BDC2032B19600C65F78 /* LaunchScreen.storyboard */; };
 		7EBC2BE92032B19600C65F78 /* SearchSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC2BE82032B19600C65F78 /* SearchSampleTests.swift */; };
 		7EBC2BF42032B19600C65F78 /* SearchSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC2BF32032B19600C65F78 /* SearchSampleUITests.swift */; };
+		7EC1AE90203D7CFD00FD6592 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1AE8E203D7CFD00FD6592 /* RealmSwift.framework */; };
+		7EC1AE91203D7CFD00FD6592 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1AE8F203D7CFD00FD6592 /* Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E2AB539203D069E00310FB0 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		7E2AB53B203D247300310FB0 /* ShopRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRequest.swift; sourceTree = "<group>"; };
 		7E364C3E203C175100C762CD /* AreaMiddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaMiddle.swift; sourceTree = "<group>"; };
 		7E364C40203C176100C762CD /* AreaSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSmall.swift; sourceTree = "<group>"; };
 		7E364C42203C1BD500C762CD /* AreaSubInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSubInfo.swift; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 		7EBC2BEF2032B19600C65F78 /* SearchSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBC2BF32032B19600C65F78 /* SearchSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSampleUITests.swift; sourceTree = "<group>"; };
 		7EBC2BF52032B19600C65F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EC1AE8E203D7CFD00FD6592 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		7EC1AE8F203D7CFD00FD6592 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,13 +144,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC1AE90203D7CFD00FD6592 /* RealmSwift.framework in Frameworks */,
+				7EC1AE91203D7CFD00FD6592 /* Realm.framework in Frameworks */,
 				7E67A28C203407D200CCAC48 /* RxBlocking.framework in Frameworks */,
 				7E67A28D203407D200CCAC48 /* RxCocoa.framework in Frameworks */,
-				7E67A28E203407D200CCAC48 /* Himotoki.framework in Frameworks */,
 				7E67A28F203407D200CCAC48 /* Alamofire.framework in Frameworks */,
 				7E67A290203407D200CCAC48 /* RxSwift.framework in Frameworks */,
-				7E67A291203407D200CCAC48 /* Result.framework in Frameworks */,
-				7E67A293203407D200CCAC48 /* APIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +209,7 @@
 				7E4E8A7F203C120800CA0C90 /* CategoryLargeRequest.swift */,
 				7E4E8A81203C131F00CA0C90 /* CategorySmallRequest.swift */,
 				7E364C46203C1D8300C762CD /* AreaSmallRequest.swift */,
+				7E2AB53B203D247300310FB0 /* ShopRequest.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -219,6 +224,8 @@
 		7E67A283203407D100CCAC48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EC1AE8F203D7CFD00FD6592 /* Realm.framework */,
+				7EC1AE8E203D7CFD00FD6592 /* RealmSwift.framework */,
 				7E67A287203407D200CCAC48 /* Alamofire.framework */,
 				7E67A28B203407D200CCAC48 /* APIKit.framework */,
 				7E67A286203407D100CCAC48 /* Himotoki.framework */,
@@ -360,6 +367,7 @@
 				7E364C42203C1BD500C762CD /* AreaSubInfo.swift */,
 				7E4E8A7B203C105600CA0C90 /* CategoryLarge.swift */,
 				7E4E8A7D203C111500CA0C90 /* CategorySmall.swift */,
+				7E2AB539203D069E00310FB0 /* Shop.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -502,12 +510,11 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 			);
 			name = "Run Script Carthage";
 			outputPaths = (
@@ -525,6 +532,7 @@
 			files = (
 				7E67A27C2033E86300CCAC48 /* CurrentLocationUsecase.swift in Sources */,
 				7E364C51203C22AD00C762CD /* InputAddressRequest.swift in Sources */,
+				7E2AB53C203D247300310FB0 /* ShopRequest.swift in Sources */,
 				7E67A27A2033E67500CCAC48 /* AppConst.swift in Sources */,
 				7E67A29F20343EDE00CCAC48 /* InputAddressDataStore.swift in Sources */,
 				7E364C55203C22F300C762CD /* CurrentLocation.swift in Sources */,
@@ -556,6 +564,7 @@
 				7E4E8A82203C131F00CA0C90 /* CategorySmallRequest.swift in Sources */,
 				7E364C43203C1BD500C762CD /* AreaSubInfo.swift in Sources */,
 				7E4E8A7C203C105600CA0C90 /* CategoryLarge.swift in Sources */,
+				7E2AB53A203D069E00310FB0 /* Shop.swift in Sources */,
 				7E364C4F203C225400C762CD /* GetShopCategoryRequest.swift in Sources */,
 				7E364C41203C176200C762CD /* AreaSmall.swift in Sources */,
 				7E67A29B203417D100CCAC48 /* CurrentLocationDataStore.swift in Sources */,

@@ -49,6 +49,7 @@ extension BaseRequest {
         _description += "--------------------------------------------"
         return _description
     }
+    
 }
 
 
@@ -61,7 +62,7 @@ extension BaseRequest where Response: Decodable {
             let decodeData = try decoder.decode(Response.self, from: data)
             return decodeData
         } catch  {
-            print("Failed to decode json data.")
+            print("Failed to decode json data. \n\(String(data: data, encoding: .utf8) ?? "")")
             print("\(error.localizedDescription)")
             fatalError()
         }
@@ -77,7 +78,7 @@ protocol BaseParam {
     func getParameter() -> [String: Any]
 }
 
-class APIParam: BaseParam {
+struct APIParam: BaseParam {
     
     func getParameter() -> [String : Any] {
         var param: [String : Any] = [:]

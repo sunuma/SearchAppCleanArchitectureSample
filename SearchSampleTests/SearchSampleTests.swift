@@ -285,4 +285,48 @@ class SearchSampleTests: XCTestCase {
         })
         self.waitForExpectations(timeout: 5, handler: nil)
     }
+    
+    /**
+     * ショップ情報取得API検証
+     *
+     */
+    func testShopRequest() {
+        
+        let exception = self.expectation(description: "completed ShopRequest")
+        
+        let name = "サンミ 大手町店 "
+        let tel = "03-6273-4214"
+        let address = "〒100-0005 東京都千代田区丸の内1-3-2 三井住友銀行東館B1F"
+        
+        var request = ShopRequest()
+        request.param.name = name
+        request.param.tel = tel
+        request.param.address = address
+        
+        HttpsClient().request(request, success: { result in
+            
+            guard let data = result as? Shop else {
+                XCTFail("result is not Shop")
+                return
+            }
+            // リストサイズ
+            XCTAssertTrue(data.info.count > 0, "ShopInfo's list count is zero")
+            // ShopInfoの中身
+            let shopInfo = data.info.first!
+            XCTAssertTrue(shopInfo.shopId != "", "Paramter 'shopId' is empty")
+            XCTAssertTrue(shopInfo.name == name, "Paramter 'name' is not \(name)")
+            XCTAssertTrue(shopInfo.address == address, "Paramter 'address' is not \(address)")
+            XCTAssertTrue(shopInfo.tel == tel, "Paramter 'tel' is not \(tel)")
+            
+            exception.fulfill()
+            
+        }, failure: { error in
+            
+            XCTFail(error.errorDescription())
+            
+            exception.fulfill()
+        })
+        self.waitForExpectations(timeout: 5, handler: nil)
+    }
+    
 }

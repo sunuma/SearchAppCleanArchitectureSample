@@ -13,8 +13,8 @@ import CoreLocation
  *
  */
 protocol CurrentLocationUsecaseOutput: class {
-    func fetchComplete(data: CurrentLocation)
-    func failure(error: Error)
+    func fetchComplete(data: Shop)
+    func failure(error: ApiError)
 }
 
 /**
@@ -49,7 +49,9 @@ extension CurrentLocationUsecase: CLLocationManagerDelegate {
         debugLog()
         guard let newLocation = locations.last else { return }
         location = newLocation.coordinate
-        let request = CurrentLocationRequest()
+        var request = ShopRequest()
+        request.param.latitude = location.latitude
+        request.param.longitude = location.longitude
         dataStore.fetch(request: request)
     }
     
@@ -75,11 +77,11 @@ extension CurrentLocationUsecase: CurrentLocationUsecaseOutput {
     
     // MARK: - CurrentLocationUsecaseOutput
     
-    func fetchComplete(data: CurrentLocation) {
+    func fetchComplete(data: Shop) {
         input?.successCurrentLocation()
     }
     
-    func failure(error: Error) {
+    func failure(error: ApiError) {
         input?.failureCurrentLocation(error: error)
     }
     

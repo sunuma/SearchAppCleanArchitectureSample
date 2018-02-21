@@ -29,12 +29,19 @@ struct HttpsClient {
                 }
                 if let data = response.data, let responseData = response.response {
                     guard let model = request.response(from: data, response: responseData) else {
-                        failure(.parseError(nil))
+                        failure(.parseError("failed to \(String(describing: T.Response.self)) class json parse."))
                         return
                     }
                     success(model as! Decodable)
                 } else {
-                    failure(.invalidResponse(nil))
+                    var message = ""
+                    if response.data == nil {
+                        message += "response.data is nil. "
+                    }
+                    if response.response == nil {
+                        message += "response.response is nil"
+                    }
+                    failure(.invalidResponse(message))
                 }
             })
         print("request = \(req.description)")
@@ -46,9 +53,9 @@ struct HttpsClient {
 enum ApiError: Error {
     
     case resultError(Error)
-    case invalidResponse(Any?)
-    case parseError(Any?)
-    
+    case invalidResponse(String?)
+    case parseError(String?)
+    case castError(String?)
     
     func errorDescription() -> String {
         var message = ""
@@ -56,11 +63,17 @@ enum ApiError: Error {
         case let .resultError(error):
             message = "Result error = \(error.localizedDescription) "
             break
-        case .invalidResponse:
-            message = "Invalid response "
+        case .invalidResponse(let msg):
+            message = "Invalid response: "
+            if let value = msg { message += value }
             break
-        case .parseError:
-            message = "Parse error "
+        case .parseError(let msg):
+            message = "Parse error: "
+            if let value = msg { message += value }
+            break
+        case .castError(let msg):
+            message = "Cast error: "
+            if let value = msg { message += value }
             break
         }
         return message

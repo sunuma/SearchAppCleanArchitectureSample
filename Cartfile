@@ -1,4 +1,3 @@
 github "ReactiveX/RxSwift"
 github "Alamofire/Alamofire"
-github "ishkawa/APIKit"
-github "ikesyo/Himotoki"
+github "realm/realm-cocoa"

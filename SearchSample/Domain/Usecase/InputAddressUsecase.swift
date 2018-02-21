@@ -21,7 +21,7 @@ enum ValidationResult {
  */
 protocol InputAddressUsecaseOutput: class {
     func fetchComplete(data: InputAddress)
-    func failure(error: Error)
+    func failure(error: ApiError)
 }
 
 /**
@@ -54,8 +54,8 @@ class InputAddressUsecase {
         if text == "" {
             return .invalid(["text is empty"])
         }
-        if text.count > 100 {
-            return .invalid(["character's count is over \(100)"])
+        if text.count > addressTextFieldMax {
+            return .invalid(["character's count is over \(addressTextFieldMax)"])
         }
         return .valid
     }
@@ -70,7 +70,7 @@ extension InputAddressUsecase: InputAddressUsecaseOutput {
         input?.successTextField()
     }
     
-    func failure(error: Error) {
+    func failure(error: ApiError) {
         input?.failureTextField(error: error)
     }
     

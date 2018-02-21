@@ -14,13 +14,13 @@ import UIKit
 protocol SelectAddressViewInput: class {
     // 現在地検索
     func successCurrentLocation()
-    func failureCurrentLocation(error: Error)
+    func failureCurrentLocation(error: ApiError)
     // 住所入力検索
     func successTextField()
-    func failureTextField(error: Error)
+    func failureTextField(error: ApiError)
     // リスト選択での絞り込み検索
     func successTableView()
-    func failureTableView(error: Error)
+    func failureTableView(error: ApiError)
     
 }
 
@@ -111,7 +111,7 @@ extension SelectAddressViewController: SelectAddressViewInput {
         }
     }
     
-    func failureCurrentLocation(error: Error) {
+    func failureCurrentLocation(error: ApiError) {
         
     }
     
@@ -129,7 +129,7 @@ extension SelectAddressViewController: SelectAddressViewInput {
         }
     }
     
-    func failureTextField(error: Error) {
+    func failureTextField(error: ApiError) {
         
     }
     
@@ -147,7 +147,7 @@ extension SelectAddressViewController: SelectAddressViewInput {
         }
     }
     
-    func failureTableView(error: Error) {
+    func failureTableView(error: ApiError) {
         
     }
     
