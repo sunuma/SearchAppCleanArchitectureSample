@@ -98,17 +98,7 @@ extension SelectAddressViewController: SelectAddressViewInput {
     // MARK: - SelectAddressViewInput
     
     func successCurrentLocation() {
-        switch currentSearchType {
-        case .address:
-            
-            break
-        case .purpose:
-            
-            break
-        case .category:
-            
-            break
-        }
+        
     }
     
     func failureCurrentLocation(error: ApiError) {
@@ -116,17 +106,7 @@ extension SelectAddressViewController: SelectAddressViewInput {
     }
     
     func successTextField() {
-        switch currentSearchType {
-        case .address:
-            
-            break
-        case .purpose:
-            
-            break
-        case .category:
-            
-            break
-        }
+        
     }
     
     func failureTextField(error: ApiError) {
@@ -134,17 +114,7 @@ extension SelectAddressViewController: SelectAddressViewInput {
     }
     
     func successTableView() {
-        switch currentSearchType {
-        case .address:
-            
-            break
-        case .purpose:
-            
-            break
-        case .category:
-            
-            break
-        }
+        
     }
     
     func failureTableView(error: ApiError) {

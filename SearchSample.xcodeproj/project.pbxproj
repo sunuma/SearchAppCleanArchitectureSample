@@ -14,7 +14,6 @@
 		7E364C43203C1BD500C762CD /* AreaSubInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C42203C1BD500C762CD /* AreaSubInfo.swift */; };
 		7E364C45203C1D1000C762CD /* AreaMiddleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C44203C1D1000C762CD /* AreaMiddleRequest.swift */; };
 		7E364C47203C1D8300C762CD /* AreaSmallRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C46203C1D8300C762CD /* AreaSmallRequest.swift */; };
-		7E364C4A203C221900C762CD /* AddressCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C48203C221900C762CD /* AddressCategory.swift */; };
 		7E364C4B203C221900C762CD /* ShopCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C49203C221900C762CD /* ShopCategory.swift */; };
 		7E364C4E203C225400C762CD /* CurrentLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C4C203C225400C762CD /* CurrentLocationRequest.swift */; };
 		7E364C4F203C225400C762CD /* GetShopCategoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C4D203C225400C762CD /* GetShopCategoryRequest.swift */; };
@@ -57,6 +56,10 @@
 		7EBC2BF42032B19600C65F78 /* SearchSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC2BF32032B19600C65F78 /* SearchSampleUITests.swift */; };
 		7EC1AE90203D7CFD00FD6592 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1AE8E203D7CFD00FD6592 /* RealmSwift.framework */; };
 		7EC1AE91203D7CFD00FD6592 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1AE8F203D7CFD00FD6592 /* Realm.framework */; };
+		7ECDAEC120400D47002D2224 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECDAEBF20400D47002D2224 /* Shop.storyboard */; };
+		7ECDAEC320401B45002D2224 /* AreaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDAEC220401B45002D2224 /* AreaEntity.swift */; };
+		7ECDAEC520401B6A002D2224 /* PrefecturesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDAEC420401B6A002D2224 /* PrefecturesEntity.swift */; };
+		7ECDAECD20401CED002D2224 /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDAECC20401CED002D2224 /* CategoryEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +87,6 @@
 		7E364C42203C1BD500C762CD /* AreaSubInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSubInfo.swift; sourceTree = "<group>"; };
 		7E364C44203C1D1000C762CD /* AreaMiddleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaMiddleRequest.swift; sourceTree = "<group>"; };
 		7E364C46203C1D8300C762CD /* AreaSmallRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSmallRequest.swift; sourceTree = "<group>"; };
-		7E364C48203C221900C762CD /* AddressCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCategory.swift; sourceTree = "<group>"; };
 		7E364C49203C221900C762CD /* ShopCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopCategory.swift; sourceTree = "<group>"; };
 		7E364C4C203C225400C762CD /* CurrentLocationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocationRequest.swift; sourceTree = "<group>"; };
 		7E364C4D203C225400C762CD /* GetShopCategoryRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetShopCategoryRequest.swift; sourceTree = "<group>"; };
@@ -137,6 +139,10 @@
 		7EBC2BF52032B19600C65F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EC1AE8E203D7CFD00FD6592 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		7EC1AE8F203D7CFD00FD6592 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		7ECDAEC020400D47002D2224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Shop.storyboard; sourceTree = "<group>"; };
+		7ECDAEC220401B45002D2224 /* AreaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaEntity.swift; sourceTree = "<group>"; };
+		7ECDAEC420401B6A002D2224 /* PrefecturesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefecturesEntity.swift; sourceTree = "<group>"; };
+		7ECDAECC20401CED002D2224 /* CategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +223,9 @@
 		7E67A2742033DFA000CCAC48 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				7ECDAEC220401B45002D2224 /* AreaEntity.swift */,
+				7ECDAEC420401B6A002D2224 /* PrefecturesEntity.swift */,
+				7ECDAECC20401CED002D2224 /* CategoryEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -348,6 +357,7 @@
 			children = (
 				7EBC2BD72032B19500C65F78 /* Main.storyboard */,
 				7EBC2BDC2032B19600C65F78 /* LaunchScreen.storyboard */,
+				7ECDAEBF20400D47002D2224 /* Shop.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -358,7 +368,6 @@
 				7E364C54203C22F200C762CD /* CurrentLocation.swift */,
 				7E364C52203C22C900C762CD /* InputAddress.swift */,
 				7E364C49203C221900C762CD /* ShopCategory.swift */,
-				7E364C48203C221900C762CD /* AddressCategory.swift */,
 				7E4E8A77203C075600CA0C90 /* Area.swift */,
 				7E4E8A71203BF0D200CA0C90 /* Prefectures.swift */,
 				7E4E8A73203BFF1200CA0C90 /* AreaLarge.swift */,
@@ -480,6 +489,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECDAEC120400D47002D2224 /* Shop.storyboard in Resources */,
 				7EBC2BDE2032B19600C65F78 /* LaunchScreen.storyboard in Resources */,
 				7EBC2BDB2032B19600C65F78 /* Assets.xcassets in Resources */,
 				7EBC2BD92032B19500C65F78 /* Main.storyboard in Resources */,
@@ -532,7 +542,9 @@
 			files = (
 				7E67A27C2033E86300CCAC48 /* CurrentLocationUsecase.swift in Sources */,
 				7E364C51203C22AD00C762CD /* InputAddressRequest.swift in Sources */,
+				7ECDAEC320401B45002D2224 /* AreaEntity.swift in Sources */,
 				7E2AB53C203D247300310FB0 /* ShopRequest.swift in Sources */,
+				7ECDAEC520401B6A002D2224 /* PrefecturesEntity.swift in Sources */,
 				7E67A27A2033E67500CCAC48 /* AppConst.swift in Sources */,
 				7E67A29F20343EDE00CCAC48 /* InputAddressDataStore.swift in Sources */,
 				7E364C55203C22F300C762CD /* CurrentLocation.swift in Sources */,
@@ -551,7 +563,6 @@
 				7E67A2762033E0DA00CCAC48 /* SelectAddressViewController.swift in Sources */,
 				7E4E8A76203C020900CA0C90 /* AreaLargeRequest.swift in Sources */,
 				7E67A29520340AE700CCAC48 /* HttpClient.swift in Sources */,
-				7E364C4A203C221900C762CD /* AddressCategory.swift in Sources */,
 				7E67A29D20343D9A00CCAC48 /* InputAddressUsecase.swift in Sources */,
 				7E4E8A80203C120800CA0C90 /* CategoryLargeRequest.swift in Sources */,
 				7E364C47203C1D8300C762CD /* AreaSmallRequest.swift in Sources */,
@@ -567,6 +578,7 @@
 				7E2AB53A203D069E00310FB0 /* Shop.swift in Sources */,
 				7E364C4F203C225400C762CD /* GetShopCategoryRequest.swift in Sources */,
 				7E364C41203C176200C762CD /* AreaSmall.swift in Sources */,
+				7ECDAECD20401CED002D2224 /* CategoryEntity.swift in Sources */,
 				7E67A29B203417D100CCAC48 /* CurrentLocationDataStore.swift in Sources */,
 				7E364C45203C1D1000C762CD /* AreaMiddleRequest.swift in Sources */,
 			);
@@ -618,6 +630,14 @@
 				7EBC2BDD2032B19600C65F78 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7ECDAEBF20400D47002D2224 /* Shop.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ECDAEC020400D47002D2224 /* Base */,
+			);
+			name = Shop.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

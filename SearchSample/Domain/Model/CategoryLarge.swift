@@ -11,7 +11,7 @@ import Foundation
 
 struct CategoryLarge: Decodable {
     
-    var info: [CategoryLargeInfo] = []
+    private(set) var info: [CategoryLargeInfo] = []
     
     private enum CodingKeys: String, CodingKey {
         case info = "category_l"
@@ -22,8 +22,8 @@ struct CategoryLarge: Decodable {
 
 struct CategoryLargeInfo: Decodable {
     
-    var code: String
-    var name: String
+    private(set) var code: String
+    private(set) var name: String
     
     private enum CodingKeys: String, CodingKey {
         case code = "category_l_code"

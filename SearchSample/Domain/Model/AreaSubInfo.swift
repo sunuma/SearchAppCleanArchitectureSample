@@ -10,8 +10,8 @@ import Foundation
 
 struct AreaLInfo: Decodable {
     
-    var code: String
-    var name: String
+    private(set) var code: String
+    private(set) var name: String
     
     private enum CodingKeys: String, CodingKey {
         case code = "areacode_l"
@@ -22,8 +22,8 @@ struct AreaLInfo: Decodable {
 
 struct AreaMInfo: Decodable {
     
-    var code: String
-    var name: String
+    private(set) var code: String
+    private(set) var name: String
     
     private enum CodingKeys: String, CodingKey {
         case code = "areacode_m"
@@ -34,8 +34,8 @@ struct AreaMInfo: Decodable {
 
 struct AreaPrefInfo: Decodable {
     
-    var code: String
-    var name: String
+    private(set) var code: String
+    private(set) var name: String
     
     private enum CodingKeys: String, CodingKey {
         case code = "pref_code"

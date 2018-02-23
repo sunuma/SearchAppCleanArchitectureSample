@@ -11,7 +11,7 @@ import Foundation
 
 struct Prefectures: Decodable {
     
-    var info: [PrefecturesInfo] = []
+    private(set) var info: [PrefecturesInfo] = []
 
     private enum CodingKeys: String, CodingKey {
         case info = "pref"
@@ -20,9 +20,9 @@ struct Prefectures: Decodable {
 
 struct PrefecturesInfo: Decodable {
     
-    var code: String
-    var name: String
-    var areaCode: String
+    private(set) var code: String
+    private(set) var name: String
+    private(set) var areaCode: String
     
     private enum CodingKeys: String, CodingKey {
         case code = "pref_code"

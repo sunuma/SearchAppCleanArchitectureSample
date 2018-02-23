@@ -11,7 +11,7 @@ import Foundation
 
 struct CategorySmall: Decodable {
     
-    var info: [CategorySmallInfo] = []
+    private(set) var info: [CategorySmallInfo] = []
     
     private enum CodingKeys: String, CodingKey {
         case info = "category_s"
@@ -22,9 +22,9 @@ struct CategorySmall: Decodable {
 
 struct CategorySmallInfo: Decodable {
     
-    var parentCode: String
-    var code: String
-    var name: String
+    private(set) var parentCode: String
+    private(set) var code: String
+    private(set) var name: String
     
     private enum CodingKeys: String, CodingKey {
         case parentCode = "category_l_code"

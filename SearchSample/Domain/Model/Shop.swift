@@ -11,11 +11,11 @@ import Foundation
 
 struct Shop: Decodable {
     
-    var hitPerPage: String = ""
-    var pageOffset: String = ""
-    var totalHitCount: String = ""
-    var info: [ShopInfo] = []
-    var errorInfo: ErrorInfo?
+    private(set) var hitPerPage: String = ""
+    private(set) var pageOffset: String = ""
+    private(set) var totalHitCount: String = ""
+    private(set) var info: [ShopInfo] = []
+    private(set) var errorInfo: ErrorInfo?
     
     private enum CodingKeys: String, CodingKey {
         case hitPerPage     = "hit_per_page"
@@ -57,29 +57,29 @@ struct Shop: Decodable {
 
 struct ShopInfo: Decodable {
  
-    var shopId: String
-    var address: String
-    var category: String
-    var budget: String? = nil
-    var holiday: String? = nil
-    var latitude: String
-    var longitude: String
-    var lunch: String? = nil
-    var name: String
-    var nameKana: String
-    var openTime: String? = nil
-    var parkingLots: String? = nil
-    var party: String? = nil
-    var tel: String
-    var telSub: String? = nil
-    var updateDate: String
-    var url: String
-    var urlMobile: String
-    var access: AccessInfo
-    var code: CodeInfo
-    var couponUrl: CouponUrlInfo
-    var imageUrl: ImageUrlInfo
-    var pr: PrInfo
+    private(set) var shopId: String
+    private(set) var address: String
+    private(set) var category: String
+    private(set) var budget: String? = nil
+    private(set) var holiday: String? = nil
+    private(set) var latitude: String
+    private(set) var longitude: String
+    private(set) var lunch: String? = nil
+    private(set) var name: String
+    private(set) var nameKana: String
+    private(set) var openTime: String? = nil
+    private(set) var parkingLots: String? = nil
+    private(set) var party: String? = nil
+    private(set) var tel: String
+    private(set) var telSub: String? = nil
+    private(set) var updateDate: String
+    private(set) var url: String
+    private(set) var urlMobile: String
+    private(set) var access: AccessInfo
+    private(set) var code: CodeInfo
+    private(set) var couponUrl: CouponUrlInfo
+    private(set) var imageUrl: ImageUrlInfo
+    private(set) var pr: PrInfo
     
     private enum CodingKeys: String, CodingKey {
         case shopId         = "id"
@@ -153,11 +153,11 @@ struct ShopInfo: Decodable {
 
 struct AccessInfo: Decodable {
     
-    var line: String
-    var note: String? = nil
-    var station: String
-    var stationExit: String? = nil
-    var walk: String
+    private(set) var line: String
+    private(set) var note: String? = nil
+    private(set) var station: String
+    private(set) var stationExit: String? = nil
+    private(set) var walk: String
     
     private enum CodingKeys: String, CodingKey {
         case line
@@ -184,16 +184,16 @@ struct AccessInfo: Decodable {
 
 struct CodeInfo: Decodable {
     
-    var areaCode: String
-    var areaCodeS: String
-    var areaName: String
-    var areaNameS: String
-    var prefCode: String
-    var prefName: String
-    var categoryCodeL: [String] = []
-    var categoryCodeS: [String] = []
-    var categoryNameL: [String] = []
-    var categoryNameS: [String] = []
+    private(set) var areaCode: String
+    private(set) var areaCodeS: String
+    private(set) var areaName: String
+    private(set) var areaNameS: String
+    private(set) var prefCode: String
+    private(set) var prefName: String
+    private(set) var categoryCodeL: [String] = []
+    private(set) var categoryCodeS: [String] = []
+    private(set) var categoryNameL: [String] = []
+    private(set) var categoryNameS: [String] = []
     
     private enum CodingKeys: String, CodingKey {
         case areaCode   = "areacode"
@@ -234,8 +234,8 @@ struct CodeInfo: Decodable {
 
 struct CouponUrlInfo: Decodable {
     
-    var mobile: String? = nil
-    var pc: String? = nil
+    private(set) var mobile: String? = nil
+    private(set) var pc: String? = nil
     
     private enum CodingKeys: String, CodingKey {
         case moblie
@@ -256,9 +256,9 @@ struct CouponUrlInfo: Decodable {
 
 struct ImageUrlInfo: Decodable {
     
-    var qrCode: String?
-    var shopImage1: String?
-    var shopImage2: String?
+    private(set) var qrCode: String?
+    private(set) var shopImage1: String?
+    private(set) var shopImage2: String?
     
     private enum CodingKeys: String, CodingKey {
         case qrCode     = "qrcode"
@@ -283,8 +283,8 @@ struct ImageUrlInfo: Decodable {
 
 struct PrInfo: Decodable {
     
-    var prLong: String?
-    var prShort: String?
+    private(set) var prLong: String?
+    private(set) var prShort: String?
     
     private enum CodingKeys: String, CodingKey {
         case prLong     = "pr_long"
@@ -305,7 +305,7 @@ struct PrInfo: Decodable {
 
 struct ErrorInfo: Decodable {
     
-    var code: String
-    var message: String
+    private(set) var code: String
+    private(set) var message: String
     
 }

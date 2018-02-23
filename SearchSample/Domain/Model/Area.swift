@@ -11,7 +11,7 @@ import Foundation
 
 struct Area: Decodable {
     
-    var info: [AreaInfo] = []
+    private(set) var info: [AreaInfo] = []
     
     private enum CodingKeys: String, CodingKey {
         case info = "area"
@@ -21,8 +21,8 @@ struct Area: Decodable {
 
 struct AreaInfo: Decodable {
     
-    var code: String
-    var name: String
+    private(set) var code: String
+    private(set) var name: String
     
     private enum CodingKeys: String, CodingKey {
         case code = "area_code"
