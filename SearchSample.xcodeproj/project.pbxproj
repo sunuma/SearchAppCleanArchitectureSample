@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E02B09620465CE10057D6F3 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E02B09520465CE10057D6F3 /* Rswift.framework */; };
+		7E02B0992046601D0057D6F3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02B0982046601D0057D6F3 /* R.generated.swift */; };
+		7E02B09B2046AE850057D6F3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02B09A2046AE850057D6F3 /* SplashViewController.swift */; };
+		7E02B09E2046AF160057D6F3 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E02B09C2046AF160057D6F3 /* Splash.storyboard */; };
+		7E02B0A02046B4070057D6F3 /* InitialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02B09F2046B4070057D6F3 /* InitialPresenter.swift */; };
 		7E2AB53A203D069E00310FB0 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AB539203D069E00310FB0 /* Shop.swift */; };
 		7E2AB53C203D247300310FB0 /* ShopRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AB53B203D247300310FB0 /* ShopRequest.swift */; };
 		7E364C3F203C175100C762CD /* AreaMiddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C3E203C175100C762CD /* AreaMiddle.swift */; };
@@ -80,6 +85,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E02B09520465CE10057D6F3 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		7E02B0982046601D0057D6F3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		7E02B09A2046AE850057D6F3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		7E02B09D2046AF160057D6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
+		7E02B09F2046B4070057D6F3 /* InitialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPresenter.swift; sourceTree = "<group>"; };
 		7E2AB539203D069E00310FB0 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		7E2AB53B203D247300310FB0 /* ShopRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRequest.swift; sourceTree = "<group>"; };
 		7E364C3E203C175100C762CD /* AreaMiddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaMiddle.swift; sourceTree = "<group>"; };
@@ -150,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E02B09620465CE10057D6F3 /* Rswift.framework in Frameworks */,
 				7EC1AE90203D7CFD00FD6592 /* RealmSwift.framework in Frameworks */,
 				7EC1AE91203D7CFD00FD6592 /* Realm.framework in Frameworks */,
 				7E67A28C203407D200CCAC48 /* RxBlocking.framework in Frameworks */,
@@ -212,9 +223,9 @@
 				7E579CEC203BC9D000FE5C55 /* PrefecturesRequest.swift */,
 				7E4E8A75203C020900CA0C90 /* AreaLargeRequest.swift */,
 				7E364C44203C1D1000C762CD /* AreaMiddleRequest.swift */,
+				7E364C46203C1D8300C762CD /* AreaSmallRequest.swift */,
 				7E4E8A7F203C120800CA0C90 /* CategoryLargeRequest.swift */,
 				7E4E8A81203C131F00CA0C90 /* CategorySmallRequest.swift */,
-				7E364C46203C1D8300C762CD /* AreaSmallRequest.swift */,
 				7E2AB53B203D247300310FB0 /* ShopRequest.swift */,
 			);
 			path = API;
@@ -233,6 +244,7 @@
 		7E67A283203407D100CCAC48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E02B09520465CE10057D6F3 /* Rswift.framework */,
 				7EC1AE8F203D7CFD00FD6592 /* Realm.framework */,
 				7EC1AE8E203D7CFD00FD6592 /* RealmSwift.framework */,
 				7E67A287203407D200CCAC48 /* Alamofire.framework */,
@@ -250,6 +262,7 @@
 		7EBC2BC72032B19500C65F78 = {
 			isa = PBXGroup;
 			children = (
+				7E02B0982046601D0057D6F3 /* R.generated.swift */,
 				7EBC2BD22032B19500C65F78 /* SearchSample */,
 				7EBC2BE72032B19600C65F78 /* SearchSampleTests */,
 				7EBC2BF22032B19600C65F78 /* SearchSampleUITests */,
@@ -328,6 +341,7 @@
 			children = (
 				7E67A2772033E3DC00CCAC48 /* SelectAddressPresenter.swift */,
 				7E8D8254203AD3670091C702 /* SelectCategoryPresenter.swift */,
+				7E02B09F2046B4070057D6F3 /* InitialPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -345,6 +359,7 @@
 		7EBC2C0A2032BA8900C65F78 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7E02B09A2046AE850057D6F3 /* SplashViewController.swift */,
 				7EBC2BD52032B19500C65F78 /* TopViewController.swift */,
 				7E67A2752033E0DA00CCAC48 /* SelectAddressViewController.swift */,
 				7E8D8252203AD2510091C702 /* SelectCategoryViewController.swift */,
@@ -356,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				7EBC2BD72032B19500C65F78 /* Main.storyboard */,
+				7E02B09C2046AF160057D6F3 /* Splash.storyboard */,
 				7EBC2BDC2032B19600C65F78 /* LaunchScreen.storyboard */,
 				7ECDAEBF20400D47002D2224 /* Shop.storyboard */,
 			);
@@ -388,10 +404,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EBC2BF82032B19600C65F78 /* Build configuration list for PBXNativeTarget "SearchSample" */;
 			buildPhases = (
+				7E02B09720465F690057D6F3 /* Run Script - R.swift */,
 				7EBC2BCC2032B19500C65F78 /* Sources */,
 				7EBC2BCD2032B19500C65F78 /* Frameworks */,
 				7EBC2BCE2032B19500C65F78 /* Resources */,
-				7EBC2C012032B3A600C65F78 /* Run Script Carthage */,
+				7EBC2C012032B3A600C65F78 /* Run Script - Carthage */,
 			);
 			buildRules = (
 			);
@@ -492,6 +509,7 @@
 				7ECDAEC120400D47002D2224 /* Shop.storyboard in Resources */,
 				7EBC2BDE2032B19600C65F78 /* LaunchScreen.storyboard in Resources */,
 				7EBC2BDB2032B19600C65F78 /* Assets.xcassets in Resources */,
+				7E02B09E2046AF160057D6F3 /* Splash.storyboard in Resources */,
 				7EBC2BD92032B19500C65F78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,7 +531,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7EBC2C012032B3A600C65F78 /* Run Script Carthage */ = {
+		7E02B09720465F690057D6F3 /* Run Script - R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - R.swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/rswift/rswift\" generate \"$SRCROOT\"";
+		};
+		7EBC2C012032B3A600C65F78 /* Run Script - Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -525,8 +557,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
 			);
-			name = "Run Script Carthage";
+			name = "Run Script - Carthage";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +591,7 @@
 				7E4E8A78203C075600CA0C90 /* Area.swift in Sources */,
 				7E67A2822034064400CCAC48 /* BaseRequest.swift in Sources */,
 				7E4E8A7E203C111500CA0C90 /* CategorySmall.swift in Sources */,
+				7E02B09B2046AE850057D6F3 /* SplashViewController.swift in Sources */,
 				7E67A2782033E3DC00CCAC48 /* SelectAddressPresenter.swift in Sources */,
 				7E8D8253203AD2510091C702 /* SelectCategoryViewController.swift in Sources */,
 				7E67A2762033E0DA00CCAC48 /* SelectAddressViewController.swift in Sources */,
@@ -566,9 +600,11 @@
 				7E67A29D20343D9A00CCAC48 /* InputAddressUsecase.swift in Sources */,
 				7E4E8A80203C120800CA0C90 /* CategoryLargeRequest.swift in Sources */,
 				7E364C47203C1D8300C762CD /* AreaSmallRequest.swift in Sources */,
+				7E02B0A02046B4070057D6F3 /* InitialPresenter.swift in Sources */,
 				7E364C53203C22C900C762CD /* InputAddress.swift in Sources */,
 				7E8D8255203AD3670091C702 /* SelectCategoryPresenter.swift in Sources */,
 				7E4E8A7A203C081300CA0C90 /* AreaRequest.swift in Sources */,
+				7E02B0992046601D0057D6F3 /* R.generated.swift in Sources */,
 				7E364C3F203C175100C762CD /* AreaMiddle.swift in Sources */,
 				7E579CEB203BC65700FE5C55 /* SearchAddressDataStore.swift in Sources */,
 				7E579CE9203BC54700FE5C55 /* SearchAddressUsecase.swift in Sources */,
@@ -616,6 +652,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7E02B09C2046AF160057D6F3 /* Splash.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E02B09D2046AF160057D6F3 /* Base */,
+			);
+			name = Splash.storyboard;
+			sourceTree = "<group>";
+		};
 		7EBC2BD72032B19500C65F78 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

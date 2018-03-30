@@ -23,6 +23,10 @@ Podfile.lock
 # Carthage
 Carthage/*
 
+# R.swift
+*.generated.swift
+rswift/*
+
 # others
 *.swp
 !.gitkeep

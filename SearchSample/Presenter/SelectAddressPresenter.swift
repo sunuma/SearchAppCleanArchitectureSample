@@ -18,10 +18,7 @@ class SelectAddressPresenter {
     private var currentLocationUsecase = CurrentLocationUsecase()
     private var inputAddressUsecase = InputAddressUsecase()
     
-    
-    func initialize() {
-        
-    }
+
     
     func viewDidLoad(_ input: SelectAddressViewInput) {
         currentLocationUsecase.input = input

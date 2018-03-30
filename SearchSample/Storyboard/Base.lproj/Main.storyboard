@@ -18,57 +18,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3V-Ql-xND">
-                                <rect key="frame" x="25" y="65" width="325" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="dcO-tU-ExV"/>
-                                </constraints>
-                                <state key="normal" title="Search Address">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onClickSearchAddress" destination="BYZ-38-t0r" eventType="touchUpInside" id="5n8-Wz-wmv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JL-Il-FPN">
-                                <rect key="frame" x="27" y="225" width="321" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="gMR-8t-V4P"/>
-                                </constraints>
-                                <state key="normal" title="Search Group Category">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onClickSearchGroupCategory" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9S-NU-wy1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDs-yx-XJ4">
-                                <rect key="frame" x="27" y="145" width="321" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="HGP-zu-hGt"/>
-                                </constraints>
-                                <state key="normal" title="Search Shop Category">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onClickSearchShopCategory" destination="BYZ-38-t0r" eventType="touchUpInside" id="FTm-9T-rcT"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="3fh-it-esF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3V-Ql-xND">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Search Address">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickSearchAddress" destination="BYZ-38-t0r" eventType="touchUpInside" id="5n8-Wz-wmv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JL-Il-FPN">
+                                        <rect key="frame" x="0.0" y="216" width="375" height="215"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Search Group Category">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickSearchGroupCategory" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9S-NU-wy1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDs-yx-XJ4">
+                                        <rect key="frame" x="0.0" y="432" width="375" height="215"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Search Shop Category">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickSearchShopCategory" destination="BYZ-38-t0r" eventType="touchUpInside" id="FTm-9T-rcT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8JL-Il-FPN" firstAttribute="top" secondItem="gDs-yx-XJ4" secondAttribute="bottom" constant="50" id="1qO-Qv-H8K"/>
-                            <constraint firstItem="J3V-Ql-xND" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="AWH-Fm-yyI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gDs-yx-XJ4" secondAttribute="trailing" constant="27" id="E8i-Yh-hta"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J3V-Ql-xND" secondAttribute="trailing" constant="25" id="OOI-eR-RkQ"/>
-                            <constraint firstItem="gDs-yx-XJ4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="YjO-K1-sdm"/>
-                            <constraint firstItem="8JL-Il-FPN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="cKI-G2-kNT"/>
-                            <constraint firstItem="J3V-Ql-xND" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="cZc-jL-xF4"/>
-                            <constraint firstItem="gDs-yx-XJ4" firstAttribute="top" secondItem="J3V-Ql-xND" secondAttribute="bottom" constant="50" id="xXa-Gt-GaU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8JL-Il-FPN" secondAttribute="trailing" constant="27" id="xzm-55-die"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3fh-it-esF" secondAttribute="trailing" id="3q6-Go-Zl5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3fh-it-esF" secondAttribute="bottom" id="H0U-Jy-ZWI"/>
+                            <constraint firstItem="3fh-it-esF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qid-VT-74g"/>
+                            <constraint firstItem="3fh-it-esF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qd1-7K-V9b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

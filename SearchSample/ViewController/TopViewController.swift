@@ -14,6 +14,11 @@ class TopViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     @IBAction func onClickSearchAddress() {
         
     }
