@@ -9,36 +9,36 @@
 import UIKit
 import RxSwift
 
-/**
- *
- */
-class SelectAddressPresenter {
-    
-    //private var searchAddressUsecase = SearchAddressUsecase()
-    private var currentLocationUsecase = CurrentLocationUsecase()
-    private var inputAddressUsecase = InputAddressUsecase()
-    
+protocol SelectAddressPresenterProtcol {
+    var listData: PublishSubject<Prefectures> { get }
+    var error: PublishSubject<ApiError> { get }
+    var isStartIndicator: PublishSubject<Bool> { get }
+    func loadData()
+}
 
+class SelectAddressPresenter: SelectAddressPresenterProtcol {
+    private(set) var useCase: SearchAddressUsecaseProtocol
+    private(set) var listData = PublishSubject<Prefectures>()
+    private(set) var error = PublishSubject<ApiError>()
+    private(set) var isStartIndicator = PublishSubject<Bool>()
     
-    func viewDidLoad(_ input: SelectAddressViewInput) {
-        currentLocationUsecase.input = input
-        inputAddressUsecase.input = input
+    init(usecase: SearchAddressUsecaseProtocol) {
+        self.useCase = usecase
     }
     
-    func clickLocation() {
-        currentLocationUsecase.getLocation()
-    }
-    
-    func searchInputText(_ text: String) {
-        inputAddressUsecase.searchInputText(text)
-    }
-    
-    func setupTableCell(_ cell: UITableViewCell) {
-        
-    }
-    
-    func selectedTableCell(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    deinit {}
+}
+
+extension SelectAddressPresenter {
+    func loadData() {
+        let _ = useCase.fetch().subscribe(onNext: { [weak self] result in
+            self?.listData.on(.next(result))
+            self?.isStartIndicator.on(.next(false))
+        }, onError: { [weak self] error in
+            self?.error.on(.error(error))
+        }, onCompleted: {
+            appPrint("SelectAddressPresenter loadData completed.")
+        })
     }
 }
 

@@ -20,7 +20,6 @@ struct AreaMiddle: Decodable {
 }
 
 struct AreaMiddleInfo: Decodable {
-    
     private(set) var code: String
     private(set) var name: String
     private(set) var areaLInfo: AreaLInfo

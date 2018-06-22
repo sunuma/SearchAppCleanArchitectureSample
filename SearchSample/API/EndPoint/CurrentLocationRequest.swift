@@ -1,39 +1,32 @@
 //
-//  PrefecturesRequest.swift
+//  CurrentLocationRequest.swift
 //  SearchSample
 //
-//  Created by 鵜沼 心 on 2018/02/20.
+//  Created by 鵜沼 心 on 2018/02/14.
 //  Copyright © 2018年 鵜沼 心. All rights reserved.
 //
 
-import Foundation
 import Alamofire
 
 /**
- * 都道府県データ取得用リクエスト
+ *
  */
-struct PrefecturesRequest: BaseRequest {
-    
-    typealias Response = Prefectures
-    
+struct CurrentLocationRequest: BaseRequest {
+    typealias Response = CurrentLocation
     var baseUrl: URL {
         return URL(string: baseURL + path)!
     }
-    
     var method: HTTPMethod {
         return .get
     }
-    
     var path: String {
-        return "/master/PrefSearchAPI/\(apiVersion)/"
+        return ""
     }
-    
     var parameters: [String : Any]? {
-        return APIParam().getParameter()
+        return nil
     }
-    
     var httpHeaderFields: [String : String]? {
         return nil
     }
-    
 }
+

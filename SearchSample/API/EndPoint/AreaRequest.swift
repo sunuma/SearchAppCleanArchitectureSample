@@ -1,5 +1,5 @@
 //
-//  CategorySmallRequest.swift
+//  AreaRequest.swift
 //  SearchSample
 //
 //  Created by 鵜沼 心 on 2018/02/20.
@@ -10,30 +10,23 @@ import Foundation
 import Alamofire
 
 /**
- * 業態カテゴリ小データ取得用リクエスト
+ * エリアデータ取得用リクエスト
  */
-struct CategorySmallRequest: BaseRequest {
-    
-    typealias Response = CategorySmall
-    
+struct AreaRequest: BaseRequest {
+    typealias Response = Area
     var baseUrl: URL {
         return URL(string: baseURL + path)!
     }
-    
     var method: HTTPMethod {
         return .get
     }
-    
     var path: String {
-        return "/master/CategorySmallSearchAPI/\(apiVersion)/"
+        return "/master/AreaSearchAPI/\(apiVersion)/"
     }
-    
     var parameters: [String: Any]? {
         return APIParam().getParameter()
     }
-    
     var httpHeaderFields: [String: String]? {
         return nil
     }
-    
 }

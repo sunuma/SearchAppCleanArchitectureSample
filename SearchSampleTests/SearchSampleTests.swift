@@ -10,7 +10,6 @@ import XCTest
 @testable import SearchSample
 
 class SearchSampleTests: XCTestCase {
-    
     override func setUp() {
         super.setUp()
     }
@@ -24,31 +23,21 @@ class SearchSampleTests: XCTestCase {
      *
      */
     func testAreaRequest() {
-        
         let exception = self.expectation(description: "completed testAreaRequest")
-        
         let request = AreaRequest()
         HttpsClient().request(request, success: { result in
-            
             guard let data = result as? Area else {
                 XCTFail("result is not Area")
                 return
             }
-            // リストサイズ
             XCTAssertTrue(data.info.count > 0, "AreaInfo's list count is zero")
-            // PrefecturesInfoの中身
             let info = data.info.first!
             XCTAssertTrue(info.code != "", "Paramter 'code' is empty")
             XCTAssertTrue(info.name != "", "Paramter 'name' is empty")
-            
             exception.fulfill()
-            
         }, failure: { error in
-            
             XCTFail(error.errorDescription())
-            
             exception.fulfill()
-            
         })
         self.waitForExpectations(timeout: 5, handler: nil)
     }
@@ -58,32 +47,22 @@ class SearchSampleTests: XCTestCase {
      *
      */
     func testPrefecturesRequest() {
-        
         let exception = self.expectation(description: "completed PrefecturesRequest")
-        
         let request = PrefecturesRequest()
         HttpsClient().request(request, success: { result in
-            
             guard let data = result as? Prefectures else {
                 XCTFail("result is not Prefectures")
                 return
             }
-            // リストサイズ
             XCTAssertTrue(data.info.count > 0, "PrefecturesInfo's list count is zero")
-            // PrefecturesInfoの中身
             let info = data.info.first!
             XCTAssertTrue(info.code != "", "Paramter 'code' is empty")
             XCTAssertTrue(info.name != "", "Paramter 'name' is empty")
             XCTAssertTrue(info.areaCode != "", "Paramter 'areaCode' is empty")
-            
             exception.fulfill()
-            
         }, failure: { error in
-            
             XCTFail(error.errorDescription())
-            
             exception.fulfill()
-            
         })
         self.waitForExpectations(timeout: 5, handler: nil)
     }
@@ -93,38 +72,26 @@ class SearchSampleTests: XCTestCase {
      *
      */
     func testAreaLargeRequest() {
-        
         let exception = self.expectation(description: "completed AreaLargeRequest")
-        
         let request = AreaLargeRequest()
         HttpsClient().request(request, success: { result in
-            
             guard let data = result as? AreaLarge else {
                 XCTFail("result is not AreaLarge")
                 return
             }
-            // リストサイズ
             XCTAssertTrue(data.info.count > 0, "AreaLargeInfo's list count is zero")
-            // AreaLargeInfoの中身
             let areaLInfo = data.info.first!
             XCTAssertTrue(areaLInfo.code != "", "Paramter 'code' is empty")
             XCTAssertTrue(areaLInfo.name != "", "Paramter 'name' is empty")
-            // AreaLPrefInfoの中身
             let prefInfo = areaLInfo.info
             XCTAssertTrue(prefInfo.code != "", "Paramter 'code' is empty")
             XCTAssertTrue(prefInfo.name != "", "Paramter 'name' is empty")
-            
             exception.fulfill()
-            
         }, failure: { error in
-            
             XCTFail(error.errorDescription())
-            
             exception.fulfill()
-            
         })
         self.waitForExpectations(timeout: 5, handler: nil)
-        
     }
     
     /**
@@ -132,17 +99,13 @@ class SearchSampleTests: XCTestCase {
      *
      */
     func testAreaMiddleRequest() {
-        
         let exception = self.expectation(description: "completed AreaMiddleRequest")
-        
         let request = AreaMiddleRequest()
         HttpsClient().request(request, success: { result in
-            
             guard let data = result as? AreaMiddle else {
                 XCTFail("result is not AreaMiddle")
                 return
             }
-            // リストサイズ
             XCTAssertTrue(data.info.count > 0, "AreaMiddleInfo's list count is zero")
             // AreaMiddleInfoの中身
             let areaMInfo = data.info.first!
@@ -156,18 +119,12 @@ class SearchSampleTests: XCTestCase {
             let prefInfo = areaMInfo.prefInfo
             XCTAssertTrue(prefInfo.code != "", "AreaPrefInfo's Paramter 'code' is empty")
             XCTAssertTrue(prefInfo.name != "", "AreaPrefInfo's Paramter 'name' is empty")
-            
             exception.fulfill()
-            
         }, failure: { error in
-            
             XCTFail(error.errorDescription())
-            
             exception.fulfill()
-            
         })
         self.waitForExpectations(timeout: 5, handler: nil)
-        
     }
     
     /**
@@ -175,17 +132,13 @@ class SearchSampleTests: XCTestCase {
      *
      */
     func testAreaSmallRequest() {
-        
         let exception = self.expectation(description: "completed AreaSmallRequest")
-        
         let request = AreaSmallRequest()
         HttpsClient().request(request, success: { result in
-            
             guard let data = result as? AreaSmall else {
                 XCTFail("result is not AreaSmall")
                 return
             }
-            // リストサイズ
             XCTAssertTrue(data.info.count > 0, "AreaSmallInfo's list count is zero")
             // AreaSmallInfoの中身
             let areaSmallInfo = data.info.first!
@@ -203,18 +156,12 @@ class SearchSampleTests: XCTestCase {
             let prefInfo = areaSmallInfo.prefInfo
             XCTAssertTrue(prefInfo.code != "", "AreaPrefInfo's Paramter 'code' is empty")
             XCTAssertTrue(prefInfo.name != "", "AreaPrefInfo's Paramter 'name' is empty")
-            
             exception.fulfill()
-            
         }, failure: { error in
-            
             XCTFail(error.errorDescription())
-            
             exception.fulfill()
-            
         })
         self.waitForExpectations(timeout: 5, handler: nil)
-        
     }
 
     /**
@@ -222,31 +169,22 @@ class SearchSampleTests: XCTestCase {
      *
      */
     func testCategoryLargeRequest() {
-        
         let exception = self.expectation(description: "completed CategoryLargeRequest")
-        
         let request = CategoryLargeRequest()
         HttpsClient().request(request, success: { result in
-            
             guard let data = result as? CategoryLarge else {
                 XCTFail("result is not CategoryLarge")
                 return
             }
-            // リストサイズ
             XCTAssertTrue(data.info.count > 0, "CategoryLargeInfo's list count is zero")
             // CategoryLargeInfoの中身
             let categoryLInfo = data.info.first!
             XCTAssertTrue(categoryLInfo.code != "", "Paramter 'code' is empty")
             XCTAssertTrue(categoryLInfo.name != "", "Paramter 'name' is empty")
-            
             exception.fulfill()
-            
         }, failure: { error in
-            
             XCTFail(error.errorDescription())
-            
             exception.fulfill()
-            
         })
         self.waitForExpectations(timeout: 5, handler: nil)
     }
@@ -256,32 +194,23 @@ class SearchSampleTests: XCTestCase {
      *
      */
     func testCategorySmallRequest() {
-        
         let exception = self.expectation(description: "completed CategorySmallRequest")
-        
         let request = CategorySmallRequest()
         HttpsClient().request(request, success: { result in
-            
             guard let data = result as? CategorySmall else {
                 XCTFail("result is not CategorySmall")
                 return
             }
-            // リストサイズ
             XCTAssertTrue(data.info.count > 0, "CategorySmallInfo's list count is zero")
             // CategoryLargeInfoの中身
             let categoryLInfo = data.info.first!
             XCTAssertTrue(categoryLInfo.parentCode != "", "Paramter 'parentCode' is empty")
             XCTAssertTrue(categoryLInfo.code != "", "Paramter 'code' is empty")
             XCTAssertTrue(categoryLInfo.name != "", "Paramter 'name' is empty")
-            
             exception.fulfill()
-            
         }, failure: { error in
-            
             XCTFail(error.errorDescription())
-            
             exception.fulfill()
-            
         })
         self.waitForExpectations(timeout: 5, handler: nil)
     }
@@ -291,20 +220,16 @@ class SearchSampleTests: XCTestCase {
      *
      */
     func testShopRequest() {
-        
         let exception = self.expectation(description: "completed ShopRequest")
-        
         let name = "サンミ 大手町店 "
         let tel = "03-6273-4214"
         let address = "〒100-0005 東京都千代田区丸の内1-3-2 三井住友銀行東館B1F"
-        
         var request = ShopRequest()
         request.param.name = name
         request.param.tel = tel
         request.param.address = address
         
         HttpsClient().request(request, success: { result in
-            
             guard let data = result as? Shop else {
                 XCTFail("result is not Shop")
                 return
@@ -317,16 +242,11 @@ class SearchSampleTests: XCTestCase {
             XCTAssertTrue(shopInfo.name == name, "Paramter 'name' is not \(name)")
             XCTAssertTrue(shopInfo.address == address, "Paramter 'address' is not \(address)")
             XCTAssertTrue(shopInfo.tel == tel, "Paramter 'tel' is not \(tel)")
-            
             exception.fulfill()
-            
         }, failure: { error in
-            
             XCTFail(error.errorDescription())
-            
             exception.fulfill()
         })
         self.waitForExpectations(timeout: 5, handler: nil)
     }
-    
 }

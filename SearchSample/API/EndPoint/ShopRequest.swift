@@ -13,35 +13,26 @@ import Alamofire
  * エリアデータ取得用リクエスト
  */
 struct ShopRequest: BaseRequest {
-    
     typealias Response = Shop
-    
     var param = ShopAPIParam()
-    
     var baseUrl: URL {
         return URL(string: baseURL + path)!
     }
-    
     var method: HTTPMethod {
         return .get
     }
-    
     var path: String {
         return "/RestSearchAPI/\(apiVersion)/"
     }
-    
     var parameters: [String: Any]? {
         return param.getParameter()
     }
-    
     var httpHeaderFields: [String: String]? {
         return nil
     }
-    
 }
 
 struct ShopAPIParam: BaseParam {
-    
     var id: String?
     var name: String?
     var address: String?
@@ -75,5 +66,4 @@ struct ShopAPIParam: BaseParam {
         if let value = lunchBuffet { param[ShopParameterKey.lunchBuffet.rawValue] = value }
         return param
     }
-    
 }

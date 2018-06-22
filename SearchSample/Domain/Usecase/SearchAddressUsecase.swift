@@ -7,24 +7,23 @@
 //
 
 import Foundation
+import RxSwift
 
-protocol SearchAddressUsecaseOutput: class {
-    
+protocol SearchAddressUsecaseProtocol {
+    func fetch() -> Observable<Prefectures>
 }
 
 /**
  *
  */
-class SearchAddressUsecase {
+class SearchAddressUsecase: SearchAddressUsecaseProtocol {
+    var repository: SearchAddressRepositoryProtocol
     
-    let dataStore = SearchAddressDataStore()
-    
-    init() {
-        
+    init(repository: SearchAddressRepositoryProtocol) {
+        self.repository = repository
     }
-
-}
-
-extension SearchAddressUsecase: SearchAddressUsecaseOutput {
     
+    func fetch() -> Observable<Prefectures> {
+        return repository.fetch()
+    }
 }

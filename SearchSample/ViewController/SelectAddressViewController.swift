@@ -7,50 +7,40 @@
 //
 
 import UIKit
-
-/**
- *
- */
-protocol SelectAddressViewInput: class {
-    // 現在地検索
-    func successCurrentLocation()
-    func failureCurrentLocation(error: ApiError)
-    // 住所入力検索
-    func successTextField()
-    func failureTextField(error: ApiError)
-    // リスト選択での絞り込み検索
-    func successTableView()
-    func failureTableView(error: ApiError)
-    
-}
+import RxSwift
 
 /**
  *
  */
 class SelectAddressViewController: UIViewController {
-    
     @IBOutlet weak var searchAddressField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
-    fileprivate let presenter = SelectAddressPresenter()
+    private var presenter: SelectAddressPresenterProtcol!
+    private let disposeBag = DisposeBag()
+    private var listData: [PrefecturesInfo] = []
  
     override func viewDidLoad() {
         super.viewDidLoad()
         searchAddressField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-        presenter.viewDidLoad(self)
+        presenter = initializeSelectAddress()
+        subscribe()
+        presenter.loadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
     // MARK: - IBAction
     
     @IBAction func onClickCurrentLocation() {
-        presenter.clickLocation()
+        
     }
     
     @IBAction func onClickReturn() {
@@ -61,64 +51,45 @@ class SelectAddressViewController: UIViewController {
 // MARK: - UITextFieldDelegate
 
 extension SelectAddressViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let inputText = textField.text else {
+        guard let _ = textField.text else {
             return false
         }
-        presenter.searchInputText(inputText)
         return true
     }
 }
 
 extension SelectAddressViewController: UITableViewDelegate, UITableViewDataSource {
-    
     // MARK: - UITableViewDataSource
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.listData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        presenter.setupTableCell(cell)
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.selectAddressCell, for: indexPath) {
+            cell.label.text = self.listData[indexPath.row].name
+            return cell
+        } else {
+            let cell = UITableViewCell()
+            cell.textLabel?.text = self.listData[indexPath.row].name
+            return cell
+        }
     }
     
     // MARK: - UITableViewDelegate
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.selectedTableCell(tableView, didSelectRowAt: indexPath)
+        
     }
 }
 
-
-extension SelectAddressViewController: SelectAddressViewInput {
-    
-    // MARK: - SelectAddressViewInput
-    
-    func successCurrentLocation() {
-        
+extension SelectAddressViewController {
+    func subscribe() {
+        presenter.listData.subscribe(onNext: { [unowned self] result in
+            self.listData = result.info
+            self.tableView.reloadData()
+        }).disposed(by: disposeBag)
+        presenter.error.subscribe(onError: { error in
+            appDump(error)
+        }).disposed(by: disposeBag)
     }
-    
-    func failureCurrentLocation(error: ApiError) {
-        
-    }
-    
-    func successTextField() {
-        
-    }
-    
-    func failureTextField(error: ApiError) {
-        
-    }
-    
-    func successTableView() {
-        
-    }
-    
-    func failureTableView(error: ApiError) {
-        
-    }
-    
 }

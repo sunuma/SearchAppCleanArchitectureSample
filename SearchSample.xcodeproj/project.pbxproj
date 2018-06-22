@@ -12,6 +12,9 @@
 		73BF494620DC92DA00DAEE1C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494320DC92DA00DAEE1C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73BF494720DC92DA00DAEE1C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494420DC92DA00DAEE1C /* Realm.framework */; };
 		73BF494820DC92DA00DAEE1C /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494420DC92DA00DAEE1C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73BF494C20DCCC6600DAEE1C /* SearchAddressRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF494B20DCCC6600DAEE1C /* SearchAddressRepository.swift */; };
+		73BF494E20DCE14200DAEE1C /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF494D20DCE14200DAEE1C /* Initialization.swift */; };
+		73BF495120DCF19500DAEE1C /* SelectAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF495020DCF19500DAEE1C /* SelectAddressCell.swift */; };
 		7E02B09620465CE10057D6F3 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E02B09520465CE10057D6F3 /* Rswift.framework */; };
 		7E02B09B2046AE850057D6F3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02B09A2046AE850057D6F3 /* SplashViewController.swift */; };
 		7E02B09E2046AF160057D6F3 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E02B09C2046AF160057D6F3 /* Splash.storyboard */; };
@@ -105,6 +108,9 @@
 		733C6E8120DC8AD0008E771A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		73BF494320DC92DA00DAEE1C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		73BF494420DC92DA00DAEE1C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		73BF494B20DCCC6600DAEE1C /* SearchAddressRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressRepository.swift; sourceTree = "<group>"; };
+		73BF494D20DCE14200DAEE1C /* Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
+		73BF495020DCF19500DAEE1C /* SelectAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressCell.swift; sourceTree = "<group>"; };
 		7E02B09520465CE10057D6F3 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 		7E02B09A2046AE850057D6F3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7E02B09D2046AF160057D6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
@@ -213,6 +219,40 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
+		73BF494920DC990A00DAEE1C /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				7E364C50203C22AD00C762CD /* InputAddressRequest.swift */,
+				7E364C4C203C225400C762CD /* CurrentLocationRequest.swift */,
+				7E364C4D203C225400C762CD /* GetShopCategoryRequest.swift */,
+				7E4E8A79203C081300CA0C90 /* AreaRequest.swift */,
+				7E579CEC203BC9D000FE5C55 /* PrefecturesRequest.swift */,
+				7E4E8A75203C020900CA0C90 /* AreaLargeRequest.swift */,
+				7E364C44203C1D1000C762CD /* AreaMiddleRequest.swift */,
+				7E364C46203C1D8300C762CD /* AreaSmallRequest.swift */,
+				7E4E8A7F203C120800CA0C90 /* CategoryLargeRequest.swift */,
+				7E4E8A81203C131F00CA0C90 /* CategorySmallRequest.swift */,
+				7E2AB53B203D247300310FB0 /* ShopRequest.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		73BF494A20DCCC0300DAEE1C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				73BF494B20DCCC6600DAEE1C /* SearchAddressRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		73BF494F20DCF16000DAEE1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73BF495020DCF19500DAEE1C /* SelectAddressCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7E67A2722033DF5900CCAC48 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,19 +266,9 @@
 		7E67A2732033DF7B00CCAC48 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				7E364C50203C22AD00C762CD /* InputAddressRequest.swift */,
-				7E364C4C203C225400C762CD /* CurrentLocationRequest.swift */,
-				7E364C4D203C225400C762CD /* GetShopCategoryRequest.swift */,
 				7E67A2812034064400CCAC48 /* BaseRequest.swift */,
 				7E67A29420340AE700CCAC48 /* HttpClient.swift */,
-				7E4E8A79203C081300CA0C90 /* AreaRequest.swift */,
-				7E579CEC203BC9D000FE5C55 /* PrefecturesRequest.swift */,
-				7E4E8A75203C020900CA0C90 /* AreaLargeRequest.swift */,
-				7E364C44203C1D1000C762CD /* AreaMiddleRequest.swift */,
-				7E364C46203C1D8300C762CD /* AreaSmallRequest.swift */,
-				7E4E8A7F203C120800CA0C90 /* CategoryLargeRequest.swift */,
-				7E4E8A81203C131F00CA0C90 /* CategorySmallRequest.swift */,
-				7E2AB53B203D247300310FB0 /* ShopRequest.swift */,
+				73BF494920DC990A00DAEE1C /* EndPoint */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -300,6 +330,7 @@
 			children = (
 				7EBC2BD32032B19500C65F78 /* AppDelegate.swift */,
 				7E67A2792033E67500CCAC48 /* AppConst.swift */,
+				73BF494F20DCF16000DAEE1C /* View */,
 				7EBC2C0A2032BA8900C65F78 /* ViewController */,
 				7EBC2C072032BA2B00C65F78 /* Presenter */,
 				7EBC2C062032BA2100C65F78 /* Data */,
@@ -309,6 +340,7 @@
 				733C6E7C20DC852D008E771A /* Framework */,
 				7EBC2BDA2032B19600C65F78 /* Assets.xcassets */,
 				7EBC2BDF2032B19600C65F78 /* Info.plist */,
+				73BF494D20DCE14200DAEE1C /* Initialization.swift */,
 			);
 			path = SearchSample;
 			sourceTree = "<group>";
@@ -343,6 +375,7 @@
 		7EBC2C062032BA2100C65F78 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				73BF494A20DCCC0300DAEE1C /* Repository */,
 				7E67A2742033DFA000CCAC48 /* Entity */,
 				7E67A2722033DF5900CCAC48 /* DataStore */,
 			);
@@ -601,10 +634,13 @@
 				7E579CED203BC9D000FE5C55 /* PrefecturesRequest.swift in Sources */,
 				7EBC2BD42032B19500C65F78 /* AppDelegate.swift in Sources */,
 				7E4E8A78203C075600CA0C90 /* Area.swift in Sources */,
+				73BF494C20DCCC6600DAEE1C /* SearchAddressRepository.swift in Sources */,
 				7E67A2822034064400CCAC48 /* BaseRequest.swift in Sources */,
 				7E4E8A7E203C111500CA0C90 /* CategorySmall.swift in Sources */,
 				7E02B09B2046AE850057D6F3 /* SplashViewController.swift in Sources */,
+				73BF495120DCF19500DAEE1C /* SelectAddressCell.swift in Sources */,
 				7E67A2782033E3DC00CCAC48 /* SelectAddressPresenter.swift in Sources */,
+				73BF494E20DCE14200DAEE1C /* Initialization.swift in Sources */,
 				7E8D8253203AD2510091C702 /* SelectCategoryViewController.swift in Sources */,
 				7E67A2762033E0DA00CCAC48 /* SelectAddressViewController.swift in Sources */,
 				7E4E8A76203C020900CA0C90 /* AreaLargeRequest.swift in Sources */,

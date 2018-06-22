@@ -12,39 +12,19 @@ import CoreLocation
 /**
  *
  */
-protocol CurrentLocationUsecaseOutput: class {
-    func fetchComplete(data: Shop)
-    func failure(error: ApiError)
-}
-
-/**
- *
- */
 class CurrentLocationUsecase: NSObject {
-    
-    weak var input: SelectAddressViewInput?
     private let locationManager = CLLocationManager()
     private(set) var location = CLLocationCoordinate2D()
-    
-    let dataStore = CurrentLocationDataStore()
     
     override init() {
         super.init()
         locationManager.delegate = self
-        dataStore.output = self
         locationManager.requestWhenInUseAuthorization()
     }
-    
-    func getLocation() {
-        locationManager.requestLocation()
-    }
-    
 }
 
 extension CurrentLocationUsecase: CLLocationManagerDelegate {
-    
     // MARK: - CLLocationManagerDelegate
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         debugLog()
         guard let newLocation = locations.last else { return }
@@ -52,7 +32,7 @@ extension CurrentLocationUsecase: CLLocationManagerDelegate {
         var request = ShopRequest()
         request.param.latitude = location.latitude
         request.param.longitude = location.longitude
-        dataStore.fetch(request: request)
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -70,19 +50,4 @@ extension CurrentLocationUsecase: CLLocationManagerDelegate {
         default: break
         }
     }
-    
-}
-
-extension CurrentLocationUsecase: CurrentLocationUsecaseOutput {
-    
-    // MARK: - CurrentLocationUsecaseOutput
-    
-    func fetchComplete(data: Shop) {
-        input?.successCurrentLocation()
-    }
-    
-    func failure(error: ApiError) {
-        input?.failureCurrentLocation(error: error)
-    }
-    
 }

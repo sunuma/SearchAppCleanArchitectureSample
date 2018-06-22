@@ -11,47 +11,52 @@ import Alamofire
 
 
 struct HttpsClient {
-    
     func request<T: BaseRequest>(_ request: T, success: @escaping (Decodable) -> Void, failure: @escaping ((ApiError) -> Void)) {
-        
         let endPoint    = request.baseUrl
         let params      = request.parameters
         let headers     = request.httpHeaderFields
         let method      = request.method
-        
         let req = Alamofire.request(endPoint, method: method, parameters: params, encoding: URLEncoding.default, headers: headers)
             .validate(statusCode: 200..<300)
             .responseJSON(completionHandler: { response in
-                //　リザルトエラー
                 if let error = response.result.error {
+                    appDump(error)
                     failure(.resultError(error))
                     return
                 }
                 if let data = response.data, let responseData = response.response {
-                    guard let model = request.response(from: data, response: responseData) else {
-                        failure(.parseError("failed to \(String(describing: T.Response.self)) class json parse."))
+                    guard let result = request.response(from: data, response: responseData) else {
+                        let error: ApiError = .parseError("😱 failed to \(String(describing: T.Response.self)) class json parse.")
+                        appDump(error)
+                        failure(error)
                         return
                     }
-                    success(model as! Decodable)
+                    if let model = result as? Decodable {
+                        success(model)
+                    } else {
+                        let error: ApiError = .castError("😱 failed to \(String(describing: T.Response.self)).class cast.")
+                        appDump(error)
+                        failure(error)
+                    }
                 } else {
                     var message = ""
                     if response.data == nil {
-                        message += "response.data is nil. "
+                        message += "😱 response.data is nil. "
                     }
                     if response.response == nil {
-                        message += "response.response is nil"
+                        message += "😱 response.response is nil"
                     }
-                    failure(.invalidResponse(message))
+                    let error: ApiError = .invalidResponse(message)
+                    appDump(error)
+                    failure(error)
                 }
             })
-        print("request = \(req.description)")
+        appDump(req)
     }
-    
 }
 
 
 enum ApiError: Error {
-    
     case resultError(Error)
     case invalidResponse(String?)
     case parseError(String?)

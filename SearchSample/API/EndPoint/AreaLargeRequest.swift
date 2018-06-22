@@ -1,5 +1,5 @@
 //
-//  AreaSmallRequest.swift
+//  AreaLargeRequest.swift
 //  SearchSample
 //
 //  Created by 鵜沼 心 on 2018/02/20.
@@ -12,28 +12,21 @@ import Alamofire
 /**
  * エリア大データ取得用リクエスト
  */
-struct AreaSmallRequest: BaseRequest {
-    
-    typealias Response = AreaSmall
-    
+struct AreaLargeRequest: BaseRequest {
+    typealias Response = AreaLarge
     var baseUrl: URL {
         return URL(string: baseURL + path)!
     }
-    
     var method: HTTPMethod {
         return .get
     }
-    
     var path: String {
-        return "/master/GAreaSmallSearchAPI/\(apiVersion)/"
+        return "/master/GAreaLargeSearchAPI/\(apiVersion)/"
     }
-    
     var parameters: [String: Any]? {
         return APIParam().getParameter()
     }
-    
     var httpHeaderFields: [String: String]? {
         return nil
     }
-    
 }
