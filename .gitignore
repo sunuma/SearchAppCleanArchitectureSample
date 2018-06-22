@@ -34,3 +34,10 @@ rswift/*
 *.cer
 *.mobileprovision
 .bundle
+
+# framework
+Realm.framework
+RealmSwift.framework
+
+# bundler
+vendor/*

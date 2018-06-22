@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733C6E8220DC8AD0008E771A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733C6E8120DC8AD0008E771A /* R.generated.swift */; };
+		73BF494520DC92DA00DAEE1C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494320DC92DA00DAEE1C /* RealmSwift.framework */; };
+		73BF494620DC92DA00DAEE1C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494320DC92DA00DAEE1C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73BF494720DC92DA00DAEE1C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494420DC92DA00DAEE1C /* Realm.framework */; };
+		73BF494820DC92DA00DAEE1C /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494420DC92DA00DAEE1C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7E02B09620465CE10057D6F3 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E02B09520465CE10057D6F3 /* Rswift.framework */; };
-		7E02B0992046601D0057D6F3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02B0982046601D0057D6F3 /* R.generated.swift */; };
 		7E02B09B2046AE850057D6F3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02B09A2046AE850057D6F3 /* SplashViewController.swift */; };
 		7E02B09E2046AF160057D6F3 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E02B09C2046AF160057D6F3 /* Splash.storyboard */; };
 		7E02B0A02046B4070057D6F3 /* InitialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02B09F2046B4070057D6F3 /* InitialPresenter.swift */; };
@@ -59,8 +63,6 @@
 		7EBC2BDE2032B19600C65F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC2BDC2032B19600C65F78 /* LaunchScreen.storyboard */; };
 		7EBC2BE92032B19600C65F78 /* SearchSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC2BE82032B19600C65F78 /* SearchSampleTests.swift */; };
 		7EBC2BF42032B19600C65F78 /* SearchSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC2BF32032B19600C65F78 /* SearchSampleUITests.swift */; };
-		7EC1AE90203D7CFD00FD6592 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1AE8E203D7CFD00FD6592 /* RealmSwift.framework */; };
-		7EC1AE91203D7CFD00FD6592 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1AE8F203D7CFD00FD6592 /* Realm.framework */; };
 		7ECDAEC120400D47002D2224 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECDAEBF20400D47002D2224 /* Shop.storyboard */; };
 		7ECDAEC320401B45002D2224 /* AreaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDAEC220401B45002D2224 /* AreaEntity.swift */; };
 		7ECDAEC520401B6A002D2224 /* PrefecturesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDAEC420401B6A002D2224 /* PrefecturesEntity.swift */; };
@@ -84,9 +86,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		733C6E8A20DC8E74008E771A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73BF494820DC92DA00DAEE1C /* Realm.framework in Embed Frameworks */,
+				73BF494620DC92DA00DAEE1C /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		733C6E8120DC8AD0008E771A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		73BF494320DC92DA00DAEE1C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		73BF494420DC92DA00DAEE1C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		7E02B09520465CE10057D6F3 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
-		7E02B0982046601D0057D6F3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7E02B09A2046AE850057D6F3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7E02B09D2046AF160057D6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
 		7E02B09F2046B4070057D6F3 /* InitialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPresenter.swift; sourceTree = "<group>"; };
@@ -161,10 +180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E02B09620465CE10057D6F3 /* Rswift.framework in Frameworks */,
-				7EC1AE90203D7CFD00FD6592 /* RealmSwift.framework in Frameworks */,
-				7EC1AE91203D7CFD00FD6592 /* Realm.framework in Frameworks */,
 				7E67A28C203407D200CCAC48 /* RxBlocking.framework in Frameworks */,
+				73BF494520DC92DA00DAEE1C /* RealmSwift.framework in Frameworks */,
 				7E67A28D203407D200CCAC48 /* RxCocoa.framework in Frameworks */,
+				73BF494720DC92DA00DAEE1C /* Realm.framework in Frameworks */,
 				7E67A28F203407D200CCAC48 /* Alamofire.framework in Frameworks */,
 				7E67A290203407D200CCAC48 /* RxSwift.framework in Frameworks */,
 			);
@@ -187,18 +206,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7E579CE6203BC25C00FE5C55 /* View */ = {
+		733C6E7C20DC852D008E771A /* Framework */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		7E579CE7203BC33200FE5C55 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
+			path = Framework;
 			sourceTree = "<group>";
 		};
 		7E67A2722033DF5900CCAC48 /* DataStore */ = {
@@ -262,7 +274,9 @@
 		7EBC2BC72032B19500C65F78 = {
 			isa = PBXGroup;
 			children = (
-				7E02B0982046601D0057D6F3 /* R.generated.swift */,
+				73BF494420DC92DA00DAEE1C /* Realm.framework */,
+				73BF494320DC92DA00DAEE1C /* RealmSwift.framework */,
+				733C6E8120DC8AD0008E771A /* R.generated.swift */,
 				7EBC2BD22032B19500C65F78 /* SearchSample */,
 				7EBC2BE72032B19600C65F78 /* SearchSampleTests */,
 				7EBC2BF22032B19600C65F78 /* SearchSampleUITests */,
@@ -286,14 +300,13 @@
 			children = (
 				7EBC2BD32032B19500C65F78 /* AppDelegate.swift */,
 				7E67A2792033E67500CCAC48 /* AppConst.swift */,
-				7E579CE7203BC33200FE5C55 /* Utils */,
-				7E579CE6203BC25C00FE5C55 /* View */,
 				7EBC2C0A2032BA8900C65F78 /* ViewController */,
 				7EBC2C072032BA2B00C65F78 /* Presenter */,
 				7EBC2C062032BA2100C65F78 /* Data */,
 				7EBC2C052032B9B000C65F78 /* Domain */,
 				7E67A2732033DF7B00CCAC48 /* API */,
 				7EBC2C0B2032BAA100C65F78 /* Storyboard */,
+				733C6E7C20DC852D008E771A /* Framework */,
 				7EBC2BDA2032B19600C65F78 /* Assets.xcassets */,
 				7EBC2BDF2032B19600C65F78 /* Info.plist */,
 			);
@@ -409,6 +422,7 @@
 				7EBC2BCD2032B19500C65F78 /* Frameworks */,
 				7EBC2BCE2032B19500C65F78 /* Resources */,
 				7EBC2C012032B3A600C65F78 /* Run Script - Carthage */,
+				733C6E8A20DC8E74008E771A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -555,8 +569,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
 			);
 			name = "Run Script - Carthage";
@@ -604,7 +616,7 @@
 				7E364C53203C22C900C762CD /* InputAddress.swift in Sources */,
 				7E8D8255203AD3670091C702 /* SelectCategoryPresenter.swift in Sources */,
 				7E4E8A7A203C081300CA0C90 /* AreaRequest.swift in Sources */,
-				7E02B0992046601D0057D6F3 /* R.generated.swift in Sources */,
+				733C6E8220DC8AD0008E771A /* R.generated.swift in Sources */,
 				7E364C3F203C175100C762CD /* AreaMiddle.swift in Sources */,
 				7E579CEB203BC65700FE5C55 /* SearchAddressDataStore.swift in Sources */,
 				7E579CE9203BC54700FE5C55 /* SearchAddressUsecase.swift in Sources */,
@@ -800,10 +812,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E3RH48CSLN;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SearchSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -821,10 +834,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E3RH48CSLN;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SearchSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -843,6 +857,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E3RH48CSLN;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = SearchSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.sunuma.practice.SearchSampleTests;
@@ -860,6 +875,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E3RH48CSLN;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = SearchSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.sunuma.practice.SearchSampleTests;
