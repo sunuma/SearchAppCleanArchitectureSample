@@ -20,6 +20,7 @@
 		73B06D1920E0C063003AD6D0 /* CurrentLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D1820E0C063003AD6D0 /* CurrentLocationPresenter.swift */; };
 		73B06D1C20E0D63A003AD6D0 /* ShopListMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B06D1A20E0D63A003AD6D0 /* ShopListMap.storyboard */; };
 		73B06D1E20E0D6FA003AD6D0 /* ShopListMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D1D20E0D6FA003AD6D0 /* ShopListMapViewController.swift */; };
+		73B06D2020E0E87A003AD6D0 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D1F20E0E87A003AD6D0 /* ShopDetailViewController.swift */; };
 		73BF494520DC92DA00DAEE1C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494320DC92DA00DAEE1C /* RealmSwift.framework */; };
 		73BF494620DC92DA00DAEE1C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494320DC92DA00DAEE1C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73BF494720DC92DA00DAEE1C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494420DC92DA00DAEE1C /* Realm.framework */; };
@@ -73,7 +74,7 @@
 		7EBC2BDB2032B19600C65F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC2BDA2032B19600C65F78 /* Assets.xcassets */; };
 		7EBC2BE92032B19600C65F78 /* SearchSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC2BE82032B19600C65F78 /* SearchSampleTests.swift */; };
 		7EBC2BF42032B19600C65F78 /* SearchSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC2BF32032B19600C65F78 /* SearchSampleUITests.swift */; };
-		7ECDAEC120400D47002D2224 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECDAEBF20400D47002D2224 /* Shop.storyboard */; };
+		7ECDAEC120400D47002D2224 /* ShopDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECDAEBF20400D47002D2224 /* ShopDetail.storyboard */; };
 		7ECDAEC320401B45002D2224 /* AreaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDAEC220401B45002D2224 /* AreaEntity.swift */; };
 		7ECDAEC520401B6A002D2224 /* PrefecturesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDAEC420401B6A002D2224 /* PrefecturesEntity.swift */; };
 		7ECDAECD20401CED002D2224 /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDAECC20401CED002D2224 /* CategoryEntity.swift */; };
@@ -125,6 +126,7 @@
 		73B06D1820E0C063003AD6D0 /* CurrentLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationPresenter.swift; sourceTree = "<group>"; };
 		73B06D1B20E0D63A003AD6D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ShopListMap.storyboard; sourceTree = "<group>"; };
 		73B06D1D20E0D6FA003AD6D0 /* ShopListMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListMapViewController.swift; sourceTree = "<group>"; };
+		73B06D1F20E0E87A003AD6D0 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 		73BF494320DC92DA00DAEE1C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		73BF494420DC92DA00DAEE1C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		73BF494B20DCCC6600DAEE1C /* SearchAddressRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressRepository.swift; sourceTree = "<group>"; };
@@ -188,7 +190,7 @@
 		7EBC2BF52032B19600C65F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EC1AE8E203D7CFD00FD6592 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		7EC1AE8F203D7CFD00FD6592 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		7ECDAEC020400D47002D2224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Shop.storyboard; sourceTree = "<group>"; };
+		7ECDAEC020400D47002D2224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ShopDetail.storyboard; sourceTree = "<group>"; };
 		7ECDAEC220401B45002D2224 /* AreaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaEntity.swift; sourceTree = "<group>"; };
 		7ECDAEC420401B6A002D2224 /* PrefecturesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefecturesEntity.swift; sourceTree = "<group>"; };
 		7ECDAECC20401CED002D2224 /* CategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 				7E8D8252203AD2510091C702 /* SelectCategoryViewController.swift */,
 				73B06D1220E0A340003AD6D0 /* ShopListViewController.swift */,
 				73B06D1D20E0D6FA003AD6D0 /* ShopListMapViewController.swift */,
+				73B06D1F20E0E87A003AD6D0 /* ShopDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -439,7 +442,7 @@
 			children = (
 				7EBC2BD72032B19500C65F78 /* Main.storyboard */,
 				7E02B09C2046AF160057D6F3 /* Splash.storyboard */,
-				7ECDAEBF20400D47002D2224 /* Shop.storyboard */,
+				7ECDAEBF20400D47002D2224 /* ShopDetail.storyboard */,
 				73B06D1020E085E9003AD6D0 /* SelectAddress.storyboard */,
 				73B06D0D20E084FE003AD6D0 /* ShopList.storyboard */,
 				73B06D1A20E0D63A003AD6D0 /* ShopListMap.storyboard */,
@@ -575,7 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ECDAEC120400D47002D2224 /* Shop.storyboard in Resources */,
+				7ECDAEC120400D47002D2224 /* ShopDetail.storyboard in Resources */,
 				7EBC2BDB2032B19600C65F78 /* Assets.xcassets in Resources */,
 				7E02B09E2046AF160057D6F3 /* Splash.storyboard in Resources */,
 				73B06D1120E085E9003AD6D0 /* SelectAddress.storyboard in Resources */,
@@ -652,6 +655,7 @@
 				7E67A29F20343EDE00CCAC48 /* InputAddressDataStore.swift in Sources */,
 				7EBC2BD62032B19500C65F78 /* TopViewController.swift in Sources */,
 				73B06D0820E07979003AD6D0 /* ShopSearchUsecase.swift in Sources */,
+				73B06D2020E0E87A003AD6D0 /* ShopDetailViewController.swift in Sources */,
 				7E4E8A72203BF0D200CA0C90 /* Prefectures.swift in Sources */,
 				7E364C4B203C221900C762CD /* ShopCategory.swift in Sources */,
 				7E4E8A74203BFF1200CA0C90 /* AreaLarge.swift in Sources */,
@@ -761,12 +765,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		7ECDAEBF20400D47002D2224 /* Shop.storyboard */ = {
+		7ECDAEBF20400D47002D2224 /* ShopDetail.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7ECDAEC020400D47002D2224 /* Base */,
 			);
-			name = Shop.storyboard;
+			name = ShopDetail.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -55,7 +55,10 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let shopInfo = shopData?.info[indexPath.row] else { return }
+        let vc = R.storyboard.shopDetail.instantiateInitialViewController()!
+        vc.set(shopInfo: shopInfo)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
