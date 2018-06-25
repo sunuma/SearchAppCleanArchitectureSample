@@ -48,6 +48,8 @@ struct ShopAPIParam: BaseParam {
     var desertBuffet: Int?
     var lunchBuffet: Int?
     
+    //init() {}
+    
     func getParameter() -> [String : Any] {
         var param: [String: Any] = [:]
         param[APIParameterKey.keyId.rawValue] = keyId

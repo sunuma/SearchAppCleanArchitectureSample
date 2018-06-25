@@ -12,3 +12,13 @@ func initializeSelectAddress() -> SelectAddressPresenterProtcol {
     let useCase = SearchAddressUsecase(repository: SearchAddressRepository())
     return SelectAddressPresenter(usecase: useCase)
 }
+
+func initializeShopSearch() -> ShopSearchPresenterProtocol {
+    let useCase = ShopSearchUsecase(repository: ShopSearchRepository())
+    return ShopSearchPresenter(usecase: useCase)
+}
+
+func initializeCurrentLocation() -> CurrentLocationPresenterProtocol {
+    let useCase = CurrentLocationUsecase()
+    return CurrentLocationPresenter(usecase: useCase)
+}

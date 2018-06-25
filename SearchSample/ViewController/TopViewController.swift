@@ -17,10 +17,11 @@ class TopViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
     @IBAction func onClickSearchAddress() {
+        let vc = R.storyboard.selectAddress.instantiateInitialViewController()!
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func onClickSearchGroupCategory() {

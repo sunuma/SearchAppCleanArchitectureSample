@@ -9,13 +9,11 @@
 import UIKit
 import RxSwift
 
-/**
- *
- */
 class SelectAddressViewController: UIViewController {
     @IBOutlet weak var searchAddressField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    private var presenter: SelectAddressPresenterProtcol!
+    private var selectAddress: SelectAddressPresenterProtcol!
+    private var currentLocation: CurrentLocationPresenterProtocol!
     private let disposeBag = DisposeBag()
     private var listData: [PrefecturesInfo] = []
  
@@ -24,9 +22,10 @@ class SelectAddressViewController: UIViewController {
         searchAddressField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-        presenter = initializeSelectAddress()
+        selectAddress = initializeSelectAddress()
+        currentLocation = initializeCurrentLocation()
         subscribe()
-        presenter.loadData()
+        selectAddress.subscribe()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,11 +39,7 @@ class SelectAddressViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func onClickCurrentLocation() {
-        
-    }
-    
-    @IBAction func onClickReturn() {
-        
+        currentLocation.requestLocation()
     }
 }
 
@@ -78,17 +73,31 @@ extension SelectAddressViewController: UITableViewDelegate, UITableViewDataSourc
     
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let prefecturesInfo = self.listData[indexPath.row]
+        var param = ShopAPIParam()
+        param.pref = prefecturesInfo.code
+        param.area = prefecturesInfo.areaCode
+        let vc = R.storyboard.shopList.instantiateInitialViewController()!
+        vc.initalize(param: param)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension SelectAddressViewController {
     func subscribe() {
-        presenter.listData.subscribe(onNext: { [unowned self] result in
+        // select address presenter subscribe
+        selectAddress.listData.subscribe(onNext: { [unowned self] result in
             self.listData = result.info
             self.tableView.reloadData()
+        }, onError: { error in
+            appDump(error)
         }).disposed(by: disposeBag)
-        presenter.error.subscribe(onError: { error in
+        // current location presenter subscribe
+        currentLocation.useCase.coordinate.subscribe(onNext: { [unowned self] result in
+            let vc = R.storyboard.shopListMap.instantiateInitialViewController()!
+            vc.initalize(coordinate: result)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }, onError: { error in
             appDump(error)
         }).disposed(by: disposeBag)
     }

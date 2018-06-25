@@ -8,18 +8,26 @@
 
 import Foundation
 import CoreLocation
+import RxSwift
 
-/**
- *
- */
-class CurrentLocationUsecase: NSObject {
+protocol CurrentLocationUsecaseProtocol {
+    var coordinate: PublishSubject<CLLocationCoordinate2D> { get }
+    func requestLocation()
+}
+
+class CurrentLocationUsecase: NSObject, CurrentLocationUsecaseProtocol {
     private let locationManager = CLLocationManager()
-    private(set) var location = CLLocationCoordinate2D()
+    private(set) var coordinate = PublishSubject<CLLocationCoordinate2D>()
+    private var disposeBag = DisposeBag()
     
     override init() {
         super.init()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func requestLocation() {
+        locationManager.requestLocation()
     }
 }
 
@@ -28,15 +36,11 @@ extension CurrentLocationUsecase: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         debugLog()
         guard let newLocation = locations.last else { return }
-        location = newLocation.coordinate
-        var request = ShopRequest()
-        request.param.latitude = location.latitude
-        request.param.longitude = location.longitude
-        
+        self.coordinate.on(.next(newLocation.coordinate))
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // 位置情報の取得に失敗
+        self.coordinate.on(.error(ApiError.resultError(error)))
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -45,7 +49,7 @@ extension CurrentLocationUsecase: CLLocationManagerDelegate {
             locationManager.requestWhenInUseAuthorization()
             break
         case .authorizedWhenInUse, .authorizedAlways:
-            locationManager.requestLocation()
+            appDump(status)
             break
         default: break
         }

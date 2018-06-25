@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		733C6E8220DC8AD0008E771A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733C6E8120DC8AD0008E771A /* R.generated.swift */; };
+		73B06D0620E077E8003AD6D0 /* ShopSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D0520E077E8003AD6D0 /* ShopSearchPresenter.swift */; };
+		73B06D0820E07979003AD6D0 /* ShopSearchUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D0720E07979003AD6D0 /* ShopSearchUsecase.swift */; };
+		73B06D0A20E07A07003AD6D0 /* ShopSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D0920E07A07003AD6D0 /* ShopSearchRepository.swift */; };
+		73B06D0C20E07A90003AD6D0 /* ShopSearchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D0B20E07A90003AD6D0 /* ShopSearchDataStore.swift */; };
+		73B06D0F20E084FE003AD6D0 /* ShopList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B06D0D20E084FE003AD6D0 /* ShopList.storyboard */; };
+		73B06D1120E085E9003AD6D0 /* SelectAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B06D1020E085E9003AD6D0 /* SelectAddress.storyboard */; };
+		73B06D1320E0A340003AD6D0 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D1220E0A340003AD6D0 /* ShopListViewController.swift */; };
+		73B06D1520E0A998003AD6D0 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D1420E0A998003AD6D0 /* ShopTableViewCell.swift */; };
+		73B06D1720E0B69E003AD6D0 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B06D1620E0B69E003AD6D0 /* AlamofireImage.framework */; };
+		73B06D1920E0C063003AD6D0 /* CurrentLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D1820E0C063003AD6D0 /* CurrentLocationPresenter.swift */; };
+		73B06D1C20E0D63A003AD6D0 /* ShopListMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B06D1A20E0D63A003AD6D0 /* ShopListMap.storyboard */; };
+		73B06D1E20E0D6FA003AD6D0 /* ShopListMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D1D20E0D6FA003AD6D0 /* ShopListMapViewController.swift */; };
 		73BF494520DC92DA00DAEE1C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494320DC92DA00DAEE1C /* RealmSwift.framework */; };
 		73BF494620DC92DA00DAEE1C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494320DC92DA00DAEE1C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73BF494720DC92DA00DAEE1C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494420DC92DA00DAEE1C /* Realm.framework */; };
@@ -18,7 +30,6 @@
 		7E02B09620465CE10057D6F3 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E02B09520465CE10057D6F3 /* Rswift.framework */; };
 		7E02B09B2046AE850057D6F3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02B09A2046AE850057D6F3 /* SplashViewController.swift */; };
 		7E02B09E2046AF160057D6F3 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E02B09C2046AF160057D6F3 /* Splash.storyboard */; };
-		7E02B0A02046B4070057D6F3 /* InitialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02B09F2046B4070057D6F3 /* InitialPresenter.swift */; };
 		7E2AB53A203D069E00310FB0 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AB539203D069E00310FB0 /* Shop.swift */; };
 		7E2AB53C203D247300310FB0 /* ShopRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AB53B203D247300310FB0 /* ShopRequest.swift */; };
 		7E364C3F203C175100C762CD /* AreaMiddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C3E203C175100C762CD /* AreaMiddle.swift */; };
@@ -27,11 +38,9 @@
 		7E364C45203C1D1000C762CD /* AreaMiddleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C44203C1D1000C762CD /* AreaMiddleRequest.swift */; };
 		7E364C47203C1D8300C762CD /* AreaSmallRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C46203C1D8300C762CD /* AreaSmallRequest.swift */; };
 		7E364C4B203C221900C762CD /* ShopCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C49203C221900C762CD /* ShopCategory.swift */; };
-		7E364C4E203C225400C762CD /* CurrentLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C4C203C225400C762CD /* CurrentLocationRequest.swift */; };
 		7E364C4F203C225400C762CD /* GetShopCategoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C4D203C225400C762CD /* GetShopCategoryRequest.swift */; };
 		7E364C51203C22AD00C762CD /* InputAddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C50203C22AD00C762CD /* InputAddressRequest.swift */; };
 		7E364C53203C22C900C762CD /* InputAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C52203C22C900C762CD /* InputAddress.swift */; };
-		7E364C55203C22F300C762CD /* CurrentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E364C54203C22F200C762CD /* CurrentLocation.swift */; };
 		7E4E8A72203BF0D200CA0C90 /* Prefectures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E8A71203BF0D200CA0C90 /* Prefectures.swift */; };
 		7E4E8A74203BFF1200CA0C90 /* AreaLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E8A73203BFF1200CA0C90 /* AreaLarge.swift */; };
 		7E4E8A76203C020900CA0C90 /* AreaLargeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E8A75203C020900CA0C90 /* AreaLargeRequest.swift */; };
@@ -54,7 +63,6 @@
 		7E67A28F203407D200CCAC48 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E67A287203407D200CCAC48 /* Alamofire.framework */; };
 		7E67A290203407D200CCAC48 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E67A288203407D200CCAC48 /* RxSwift.framework */; };
 		7E67A29520340AE700CCAC48 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67A29420340AE700CCAC48 /* HttpClient.swift */; };
-		7E67A29B203417D100CCAC48 /* CurrentLocationDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67A29A203417D100CCAC48 /* CurrentLocationDataStore.swift */; };
 		7E67A29D20343D9A00CCAC48 /* InputAddressUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67A29C20343D9A00CCAC48 /* InputAddressUsecase.swift */; };
 		7E67A29F20343EDE00CCAC48 /* InputAddressDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67A29E20343EDE00CCAC48 /* InputAddressDataStore.swift */; };
 		7E8D8253203AD2510091C702 /* SelectCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D8252203AD2510091C702 /* SelectCategoryViewController.swift */; };
@@ -63,7 +71,6 @@
 		7EBC2BD62032B19500C65F78 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC2BD52032B19500C65F78 /* TopViewController.swift */; };
 		7EBC2BD92032B19500C65F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC2BD72032B19500C65F78 /* Main.storyboard */; };
 		7EBC2BDB2032B19600C65F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC2BDA2032B19600C65F78 /* Assets.xcassets */; };
-		7EBC2BDE2032B19600C65F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC2BDC2032B19600C65F78 /* LaunchScreen.storyboard */; };
 		7EBC2BE92032B19600C65F78 /* SearchSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC2BE82032B19600C65F78 /* SearchSampleTests.swift */; };
 		7EBC2BF42032B19600C65F78 /* SearchSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC2BF32032B19600C65F78 /* SearchSampleUITests.swift */; };
 		7ECDAEC120400D47002D2224 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECDAEBF20400D47002D2224 /* Shop.storyboard */; };
@@ -106,6 +113,18 @@
 
 /* Begin PBXFileReference section */
 		733C6E8120DC8AD0008E771A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		73B06D0520E077E8003AD6D0 /* ShopSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSearchPresenter.swift; sourceTree = "<group>"; };
+		73B06D0720E07979003AD6D0 /* ShopSearchUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSearchUsecase.swift; sourceTree = "<group>"; };
+		73B06D0920E07A07003AD6D0 /* ShopSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSearchRepository.swift; sourceTree = "<group>"; };
+		73B06D0B20E07A90003AD6D0 /* ShopSearchDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSearchDataStore.swift; sourceTree = "<group>"; };
+		73B06D0E20E084FE003AD6D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ShopList.storyboard; sourceTree = "<group>"; };
+		73B06D1020E085E9003AD6D0 /* SelectAddress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectAddress.storyboard; sourceTree = "<group>"; };
+		73B06D1220E0A340003AD6D0 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
+		73B06D1420E0A998003AD6D0 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
+		73B06D1620E0B69E003AD6D0 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		73B06D1820E0C063003AD6D0 /* CurrentLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationPresenter.swift; sourceTree = "<group>"; };
+		73B06D1B20E0D63A003AD6D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ShopListMap.storyboard; sourceTree = "<group>"; };
+		73B06D1D20E0D6FA003AD6D0 /* ShopListMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListMapViewController.swift; sourceTree = "<group>"; };
 		73BF494320DC92DA00DAEE1C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		73BF494420DC92DA00DAEE1C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		73BF494B20DCCC6600DAEE1C /* SearchAddressRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressRepository.swift; sourceTree = "<group>"; };
@@ -114,7 +133,6 @@
 		7E02B09520465CE10057D6F3 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 		7E02B09A2046AE850057D6F3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7E02B09D2046AF160057D6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
-		7E02B09F2046B4070057D6F3 /* InitialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPresenter.swift; sourceTree = "<group>"; };
 		7E2AB539203D069E00310FB0 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		7E2AB53B203D247300310FB0 /* ShopRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRequest.swift; sourceTree = "<group>"; };
 		7E364C3E203C175100C762CD /* AreaMiddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaMiddle.swift; sourceTree = "<group>"; };
@@ -123,11 +141,9 @@
 		7E364C44203C1D1000C762CD /* AreaMiddleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaMiddleRequest.swift; sourceTree = "<group>"; };
 		7E364C46203C1D8300C762CD /* AreaSmallRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSmallRequest.swift; sourceTree = "<group>"; };
 		7E364C49203C221900C762CD /* ShopCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopCategory.swift; sourceTree = "<group>"; };
-		7E364C4C203C225400C762CD /* CurrentLocationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocationRequest.swift; sourceTree = "<group>"; };
 		7E364C4D203C225400C762CD /* GetShopCategoryRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetShopCategoryRequest.swift; sourceTree = "<group>"; };
 		7E364C50203C22AD00C762CD /* InputAddressRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputAddressRequest.swift; sourceTree = "<group>"; };
 		7E364C52203C22C900C762CD /* InputAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputAddress.swift; sourceTree = "<group>"; };
-		7E364C54203C22F200C762CD /* CurrentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocation.swift; sourceTree = "<group>"; };
 		7E4E8A71203BF0D200CA0C90 /* Prefectures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefectures.swift; sourceTree = "<group>"; };
 		7E4E8A73203BFF1200CA0C90 /* AreaLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaLarge.swift; sourceTree = "<group>"; };
 		7E4E8A75203C020900CA0C90 /* AreaLargeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaLargeRequest.swift; sourceTree = "<group>"; };
@@ -154,7 +170,6 @@
 		7E67A28A203407D200CCAC48 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		7E67A28B203407D200CCAC48 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		7E67A29420340AE700CCAC48 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
-		7E67A29A203417D100CCAC48 /* CurrentLocationDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationDataStore.swift; sourceTree = "<group>"; };
 		7E67A29C20343D9A00CCAC48 /* InputAddressUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAddressUsecase.swift; sourceTree = "<group>"; };
 		7E67A29E20343EDE00CCAC48 /* InputAddressDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAddressDataStore.swift; sourceTree = "<group>"; };
 		7E8D8252203AD2510091C702 /* SelectCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryViewController.swift; sourceTree = "<group>"; };
@@ -164,7 +179,6 @@
 		7EBC2BD52032B19500C65F78 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		7EBC2BD82032B19500C65F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EBC2BDA2032B19600C65F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7EBC2BDD2032B19600C65F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EBC2BDF2032B19600C65F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EBC2BE42032B19600C65F78 /* SearchSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBC2BE82032B19600C65F78 /* SearchSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSampleTests.swift; sourceTree = "<group>"; };
@@ -185,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B06D1720E0B69E003AD6D0 /* AlamofireImage.framework in Frameworks */,
 				7E02B09620465CE10057D6F3 /* Rswift.framework in Frameworks */,
 				7E67A28C203407D200CCAC48 /* RxBlocking.framework in Frameworks */,
 				73BF494520DC92DA00DAEE1C /* RealmSwift.framework in Frameworks */,
@@ -223,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				7E364C50203C22AD00C762CD /* InputAddressRequest.swift */,
-				7E364C4C203C225400C762CD /* CurrentLocationRequest.swift */,
 				7E364C4D203C225400C762CD /* GetShopCategoryRequest.swift */,
 				7E4E8A79203C081300CA0C90 /* AreaRequest.swift */,
 				7E579CEC203BC9D000FE5C55 /* PrefecturesRequest.swift */,
@@ -241,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				73BF494B20DCCC6600DAEE1C /* SearchAddressRepository.swift */,
+				73B06D0920E07A07003AD6D0 /* ShopSearchRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -249,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				73BF495020DCF19500DAEE1C /* SelectAddressCell.swift */,
+				73B06D1420E0A998003AD6D0 /* ShopTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,9 +272,9 @@
 		7E67A2722033DF5900CCAC48 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
-				7E67A29A203417D100CCAC48 /* CurrentLocationDataStore.swift */,
 				7E67A29E20343EDE00CCAC48 /* InputAddressDataStore.swift */,
 				7E579CEA203BC65700FE5C55 /* SearchAddressDataStore.swift */,
+				73B06D0B20E07A90003AD6D0 /* ShopSearchDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -286,6 +302,7 @@
 		7E67A283203407D100CCAC48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73B06D1620E0B69E003AD6D0 /* AlamofireImage.framework */,
 				7E02B09520465CE10057D6F3 /* Rswift.framework */,
 				7EC1AE8F203D7CFD00FD6592 /* Realm.framework */,
 				7EC1AE8E203D7CFD00FD6592 /* RealmSwift.framework */,
@@ -387,7 +404,8 @@
 			children = (
 				7E67A2772033E3DC00CCAC48 /* SelectAddressPresenter.swift */,
 				7E8D8254203AD3670091C702 /* SelectCategoryPresenter.swift */,
-				7E02B09F2046B4070057D6F3 /* InitialPresenter.swift */,
+				73B06D0520E077E8003AD6D0 /* ShopSearchPresenter.swift */,
+				73B06D1820E0C063003AD6D0 /* CurrentLocationPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -398,6 +416,7 @@
 				7E67A27B2033E86300CCAC48 /* CurrentLocationUsecase.swift */,
 				7E67A29C20343D9A00CCAC48 /* InputAddressUsecase.swift */,
 				7E579CE8203BC54700FE5C55 /* SearchAddressUsecase.swift */,
+				73B06D0720E07979003AD6D0 /* ShopSearchUsecase.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -409,6 +428,8 @@
 				7EBC2BD52032B19500C65F78 /* TopViewController.swift */,
 				7E67A2752033E0DA00CCAC48 /* SelectAddressViewController.swift */,
 				7E8D8252203AD2510091C702 /* SelectCategoryViewController.swift */,
+				73B06D1220E0A340003AD6D0 /* ShopListViewController.swift */,
+				73B06D1D20E0D6FA003AD6D0 /* ShopListMapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -418,8 +439,10 @@
 			children = (
 				7EBC2BD72032B19500C65F78 /* Main.storyboard */,
 				7E02B09C2046AF160057D6F3 /* Splash.storyboard */,
-				7EBC2BDC2032B19600C65F78 /* LaunchScreen.storyboard */,
 				7ECDAEBF20400D47002D2224 /* Shop.storyboard */,
+				73B06D1020E085E9003AD6D0 /* SelectAddress.storyboard */,
+				73B06D0D20E084FE003AD6D0 /* ShopList.storyboard */,
+				73B06D1A20E0D63A003AD6D0 /* ShopListMap.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -427,7 +450,6 @@
 		7EBC2C152032C87100C65F78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7E364C54203C22F200C762CD /* CurrentLocation.swift */,
 				7E364C52203C22C900C762CD /* InputAddress.swift */,
 				7E364C49203C221900C762CD /* ShopCategory.swift */,
 				7E4E8A77203C075600CA0C90 /* Area.swift */,
@@ -554,10 +576,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ECDAEC120400D47002D2224 /* Shop.storyboard in Resources */,
-				7EBC2BDE2032B19600C65F78 /* LaunchScreen.storyboard in Resources */,
 				7EBC2BDB2032B19600C65F78 /* Assets.xcassets in Resources */,
 				7E02B09E2046AF160057D6F3 /* Splash.storyboard in Resources */,
+				73B06D1120E085E9003AD6D0 /* SelectAddress.storyboard in Resources */,
+				73B06D0F20E084FE003AD6D0 /* ShopList.storyboard in Resources */,
 				7EBC2BD92032B19500C65F78 /* Main.storyboard in Resources */,
+				73B06D1C20E0D63A003AD6D0 /* ShopListMap.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +627,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			name = "Run Script - Carthage";
 			outputPaths = (
@@ -625,9 +650,8 @@
 				7ECDAEC520401B6A002D2224 /* PrefecturesEntity.swift in Sources */,
 				7E67A27A2033E67500CCAC48 /* AppConst.swift in Sources */,
 				7E67A29F20343EDE00CCAC48 /* InputAddressDataStore.swift in Sources */,
-				7E364C55203C22F300C762CD /* CurrentLocation.swift in Sources */,
 				7EBC2BD62032B19500C65F78 /* TopViewController.swift in Sources */,
-				7E364C4E203C225400C762CD /* CurrentLocationRequest.swift in Sources */,
+				73B06D0820E07979003AD6D0 /* ShopSearchUsecase.swift in Sources */,
 				7E4E8A72203BF0D200CA0C90 /* Prefectures.swift in Sources */,
 				7E364C4B203C221900C762CD /* ShopCategory.swift in Sources */,
 				7E4E8A74203BFF1200CA0C90 /* AreaLarge.swift in Sources */,
@@ -641,14 +665,18 @@
 				73BF495120DCF19500DAEE1C /* SelectAddressCell.swift in Sources */,
 				7E67A2782033E3DC00CCAC48 /* SelectAddressPresenter.swift in Sources */,
 				73BF494E20DCE14200DAEE1C /* Initialization.swift in Sources */,
+				73B06D1E20E0D6FA003AD6D0 /* ShopListMapViewController.swift in Sources */,
 				7E8D8253203AD2510091C702 /* SelectCategoryViewController.swift in Sources */,
 				7E67A2762033E0DA00CCAC48 /* SelectAddressViewController.swift in Sources */,
 				7E4E8A76203C020900CA0C90 /* AreaLargeRequest.swift in Sources */,
+				73B06D0A20E07A07003AD6D0 /* ShopSearchRepository.swift in Sources */,
 				7E67A29520340AE700CCAC48 /* HttpClient.swift in Sources */,
 				7E67A29D20343D9A00CCAC48 /* InputAddressUsecase.swift in Sources */,
+				73B06D1520E0A998003AD6D0 /* ShopTableViewCell.swift in Sources */,
+				73B06D0620E077E8003AD6D0 /* ShopSearchPresenter.swift in Sources */,
 				7E4E8A80203C120800CA0C90 /* CategoryLargeRequest.swift in Sources */,
+				73B06D1320E0A340003AD6D0 /* ShopListViewController.swift in Sources */,
 				7E364C47203C1D8300C762CD /* AreaSmallRequest.swift in Sources */,
-				7E02B0A02046B4070057D6F3 /* InitialPresenter.swift in Sources */,
 				7E364C53203C22C900C762CD /* InputAddress.swift in Sources */,
 				7E8D8255203AD3670091C702 /* SelectCategoryPresenter.swift in Sources */,
 				7E4E8A7A203C081300CA0C90 /* AreaRequest.swift in Sources */,
@@ -657,14 +685,15 @@
 				7E579CEB203BC65700FE5C55 /* SearchAddressDataStore.swift in Sources */,
 				7E579CE9203BC54700FE5C55 /* SearchAddressUsecase.swift in Sources */,
 				7E4E8A82203C131F00CA0C90 /* CategorySmallRequest.swift in Sources */,
+				73B06D1920E0C063003AD6D0 /* CurrentLocationPresenter.swift in Sources */,
 				7E364C43203C1BD500C762CD /* AreaSubInfo.swift in Sources */,
 				7E4E8A7C203C105600CA0C90 /* CategoryLarge.swift in Sources */,
 				7E2AB53A203D069E00310FB0 /* Shop.swift in Sources */,
 				7E364C4F203C225400C762CD /* GetShopCategoryRequest.swift in Sources */,
 				7E364C41203C176200C762CD /* AreaSmall.swift in Sources */,
 				7ECDAECD20401CED002D2224 /* CategoryEntity.swift in Sources */,
-				7E67A29B203417D100CCAC48 /* CurrentLocationDataStore.swift in Sources */,
 				7E364C45203C1D1000C762CD /* AreaMiddleRequest.swift in Sources */,
+				73B06D0C20E07A90003AD6D0 /* ShopSearchDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +729,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		73B06D0D20E084FE003AD6D0 /* ShopList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73B06D0E20E084FE003AD6D0 /* Base */,
+			);
+			name = ShopList.storyboard;
+			sourceTree = "<group>";
+		};
+		73B06D1A20E0D63A003AD6D0 /* ShopListMap.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73B06D1B20E0D63A003AD6D0 /* Base */,
+			);
+			name = ShopListMap.storyboard;
+			sourceTree = "<group>";
+		};
 		7E02B09C2046AF160057D6F3 /* Splash.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -714,14 +759,6 @@
 				7EBC2BD82032B19500C65F78 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7EBC2BDC2032B19600C65F78 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7EBC2BDD2032B19600C65F78 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		7ECDAEBF20400D47002D2224 /* Shop.storyboard */ = {

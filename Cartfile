@@ -1,4 +1,4 @@
 github "ReactiveX/RxSwift"
 github "Alamofire/Alamofire"
-github "realm/realm-cocoa"
+github "Alamofire/AlamofireImage"
 github "mac-cain13/R.swift.Library"
