@@ -9,14 +9,14 @@
 import Foundation
 import RxSwift
 
-protocol SearchAddressUsecaseProtocol {
+protocol SelectAddressUsecaseProtocol {
     func fetch() -> Observable<Prefectures>
 }
 
-class SearchAddressUsecase: SearchAddressUsecaseProtocol {
-    private var repository: SearchAddressRepositoryProtocol
+class SelectAddressUsecase: SelectAddressUsecaseProtocol {
+    private var repository: SelectAddressRepositoryProtocol
     
-    init(repository: SearchAddressRepositoryProtocol) {
+    init(repository: SelectAddressRepositoryProtocol) {
         self.repository = repository
     }
     

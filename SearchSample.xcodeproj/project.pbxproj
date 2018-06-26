@@ -13,7 +13,6 @@
 		73B06D0A20E07A07003AD6D0 /* ShopSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D0920E07A07003AD6D0 /* ShopSearchRepository.swift */; };
 		73B06D0C20E07A90003AD6D0 /* ShopSearchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D0B20E07A90003AD6D0 /* ShopSearchDataStore.swift */; };
 		73B06D0F20E084FE003AD6D0 /* ShopList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B06D0D20E084FE003AD6D0 /* ShopList.storyboard */; };
-		73B06D1120E085E9003AD6D0 /* SelectAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B06D1020E085E9003AD6D0 /* SelectAddress.storyboard */; };
 		73B06D1320E0A340003AD6D0 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D1220E0A340003AD6D0 /* ShopListViewController.swift */; };
 		73B06D1520E0A998003AD6D0 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B06D1420E0A998003AD6D0 /* ShopTableViewCell.swift */; };
 		73B06D1720E0B69E003AD6D0 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B06D1620E0B69E003AD6D0 /* AlamofireImage.framework */; };
@@ -25,9 +24,14 @@
 		73BF494620DC92DA00DAEE1C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494320DC92DA00DAEE1C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73BF494720DC92DA00DAEE1C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494420DC92DA00DAEE1C /* Realm.framework */; };
 		73BF494820DC92DA00DAEE1C /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF494420DC92DA00DAEE1C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73BF494C20DCCC6600DAEE1C /* SearchAddressRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF494B20DCCC6600DAEE1C /* SearchAddressRepository.swift */; };
+		73BF494C20DCCC6600DAEE1C /* SelectAddressRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF494B20DCCC6600DAEE1C /* SelectAddressRepository.swift */; };
 		73BF494E20DCE14200DAEE1C /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF494D20DCE14200DAEE1C /* Initialization.swift */; };
 		73BF495120DCF19500DAEE1C /* SelectAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF495020DCF19500DAEE1C /* SelectAddressCell.swift */; };
+		73CD740720E1CACA0050FF6C /* SelectCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CD740520E1CACA0050FF6C /* SelectCategory.storyboard */; };
+		73CD740A20E1CAEF0050FF6C /* SelectAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CD740820E1CAEF0050FF6C /* SelectAddress.storyboard */; };
+		73CD740C20E1CE290050FF6C /* SelectCategoryUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CD740B20E1CE290050FF6C /* SelectCategoryUsecase.swift */; };
+		73CD740E20E1D0830050FF6C /* SelectCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CD740D20E1D0830050FF6C /* SelectCategoryRepository.swift */; };
+		73CD741020E1D1150050FF6C /* SelectCategoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CD740F20E1D1150050FF6C /* SelectCategoryDataStore.swift */; };
 		7E02B09620465CE10057D6F3 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E02B09520465CE10057D6F3 /* Rswift.framework */; };
 		7E02B09B2046AE850057D6F3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02B09A2046AE850057D6F3 /* SplashViewController.swift */; };
 		7E02B09E2046AF160057D6F3 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E02B09C2046AF160057D6F3 /* Splash.storyboard */; };
@@ -51,8 +55,8 @@
 		7E4E8A7E203C111500CA0C90 /* CategorySmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E8A7D203C111500CA0C90 /* CategorySmall.swift */; };
 		7E4E8A80203C120800CA0C90 /* CategoryLargeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E8A7F203C120800CA0C90 /* CategoryLargeRequest.swift */; };
 		7E4E8A82203C131F00CA0C90 /* CategorySmallRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E8A81203C131F00CA0C90 /* CategorySmallRequest.swift */; };
-		7E579CE9203BC54700FE5C55 /* SearchAddressUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E579CE8203BC54700FE5C55 /* SearchAddressUsecase.swift */; };
-		7E579CEB203BC65700FE5C55 /* SearchAddressDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E579CEA203BC65700FE5C55 /* SearchAddressDataStore.swift */; };
+		7E579CE9203BC54700FE5C55 /* SelectAddressUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E579CE8203BC54700FE5C55 /* SelectAddressUsecase.swift */; };
+		7E579CEB203BC65700FE5C55 /* SelectAddressDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E579CEA203BC65700FE5C55 /* SelectAddressDataStore.swift */; };
 		7E579CED203BC9D000FE5C55 /* PrefecturesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E579CEC203BC9D000FE5C55 /* PrefecturesRequest.swift */; };
 		7E67A2762033E0DA00CCAC48 /* SelectAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67A2752033E0DA00CCAC48 /* SelectAddressViewController.swift */; };
 		7E67A2782033E3DC00CCAC48 /* SelectAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67A2772033E3DC00CCAC48 /* SelectAddressPresenter.swift */; };
@@ -119,7 +123,6 @@
 		73B06D0920E07A07003AD6D0 /* ShopSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSearchRepository.swift; sourceTree = "<group>"; };
 		73B06D0B20E07A90003AD6D0 /* ShopSearchDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSearchDataStore.swift; sourceTree = "<group>"; };
 		73B06D0E20E084FE003AD6D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ShopList.storyboard; sourceTree = "<group>"; };
-		73B06D1020E085E9003AD6D0 /* SelectAddress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectAddress.storyboard; sourceTree = "<group>"; };
 		73B06D1220E0A340003AD6D0 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
 		73B06D1420E0A998003AD6D0 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
 		73B06D1620E0B69E003AD6D0 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
@@ -129,9 +132,14 @@
 		73B06D1F20E0E87A003AD6D0 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 		73BF494320DC92DA00DAEE1C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		73BF494420DC92DA00DAEE1C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		73BF494B20DCCC6600DAEE1C /* SearchAddressRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressRepository.swift; sourceTree = "<group>"; };
+		73BF494B20DCCC6600DAEE1C /* SelectAddressRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressRepository.swift; sourceTree = "<group>"; };
 		73BF494D20DCE14200DAEE1C /* Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
 		73BF495020DCF19500DAEE1C /* SelectAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressCell.swift; sourceTree = "<group>"; };
+		73CD740620E1CACA0050FF6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelectCategory.storyboard; sourceTree = "<group>"; };
+		73CD740920E1CAEF0050FF6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelectAddress.storyboard; sourceTree = "<group>"; };
+		73CD740B20E1CE290050FF6C /* SelectCategoryUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryUsecase.swift; sourceTree = "<group>"; };
+		73CD740D20E1D0830050FF6C /* SelectCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryRepository.swift; sourceTree = "<group>"; };
+		73CD740F20E1D1150050FF6C /* SelectCategoryDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryDataStore.swift; sourceTree = "<group>"; };
 		7E02B09520465CE10057D6F3 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 		7E02B09A2046AE850057D6F3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7E02B09D2046AF160057D6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
@@ -155,8 +163,8 @@
 		7E4E8A7D203C111500CA0C90 /* CategorySmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySmall.swift; sourceTree = "<group>"; };
 		7E4E8A7F203C120800CA0C90 /* CategoryLargeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLargeRequest.swift; sourceTree = "<group>"; };
 		7E4E8A81203C131F00CA0C90 /* CategorySmallRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySmallRequest.swift; sourceTree = "<group>"; };
-		7E579CE8203BC54700FE5C55 /* SearchAddressUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressUsecase.swift; sourceTree = "<group>"; };
-		7E579CEA203BC65700FE5C55 /* SearchAddressDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressDataStore.swift; sourceTree = "<group>"; };
+		7E579CE8203BC54700FE5C55 /* SelectAddressUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressUsecase.swift; sourceTree = "<group>"; };
+		7E579CEA203BC65700FE5C55 /* SelectAddressDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressDataStore.swift; sourceTree = "<group>"; };
 		7E579CEC203BC9D000FE5C55 /* PrefecturesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefecturesRequest.swift; sourceTree = "<group>"; };
 		7E67A2752033E0DA00CCAC48 /* SelectAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressViewController.swift; sourceTree = "<group>"; };
 		7E67A2772033E3DC00CCAC48 /* SelectAddressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressPresenter.swift; sourceTree = "<group>"; };
@@ -256,8 +264,9 @@
 		73BF494A20DCCC0300DAEE1C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				73BF494B20DCCC6600DAEE1C /* SearchAddressRepository.swift */,
+				73BF494B20DCCC6600DAEE1C /* SelectAddressRepository.swift */,
 				73B06D0920E07A07003AD6D0 /* ShopSearchRepository.swift */,
+				73CD740D20E1D0830050FF6C /* SelectCategoryRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -275,8 +284,9 @@
 			isa = PBXGroup;
 			children = (
 				7E67A29E20343EDE00CCAC48 /* InputAddressDataStore.swift */,
-				7E579CEA203BC65700FE5C55 /* SearchAddressDataStore.swift */,
+				7E579CEA203BC65700FE5C55 /* SelectAddressDataStore.swift */,
 				73B06D0B20E07A90003AD6D0 /* ShopSearchDataStore.swift */,
+				73CD740F20E1D1150050FF6C /* SelectCategoryDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -417,7 +427,8 @@
 			children = (
 				7E67A27B2033E86300CCAC48 /* CurrentLocationUsecase.swift */,
 				7E67A29C20343D9A00CCAC48 /* InputAddressUsecase.swift */,
-				7E579CE8203BC54700FE5C55 /* SearchAddressUsecase.swift */,
+				7E579CE8203BC54700FE5C55 /* SelectAddressUsecase.swift */,
+				73CD740B20E1CE290050FF6C /* SelectCategoryUsecase.swift */,
 				73B06D0720E07979003AD6D0 /* ShopSearchUsecase.swift */,
 			);
 			path = Usecase;
@@ -443,7 +454,8 @@
 				7EBC2BD72032B19500C65F78 /* Main.storyboard */,
 				7E02B09C2046AF160057D6F3 /* Splash.storyboard */,
 				7ECDAEBF20400D47002D2224 /* ShopDetail.storyboard */,
-				73B06D1020E085E9003AD6D0 /* SelectAddress.storyboard */,
+				73CD740820E1CAEF0050FF6C /* SelectAddress.storyboard */,
+				73CD740520E1CACA0050FF6C /* SelectCategory.storyboard */,
 				73B06D0D20E084FE003AD6D0 /* ShopList.storyboard */,
 				73B06D1A20E0D63A003AD6D0 /* ShopListMap.storyboard */,
 			);
@@ -581,9 +593,10 @@
 				7ECDAEC120400D47002D2224 /* ShopDetail.storyboard in Resources */,
 				7EBC2BDB2032B19600C65F78 /* Assets.xcassets in Resources */,
 				7E02B09E2046AF160057D6F3 /* Splash.storyboard in Resources */,
-				73B06D1120E085E9003AD6D0 /* SelectAddress.storyboard in Resources */,
 				73B06D0F20E084FE003AD6D0 /* ShopList.storyboard in Resources */,
 				7EBC2BD92032B19500C65F78 /* Main.storyboard in Resources */,
+				73CD740A20E1CAEF0050FF6C /* SelectAddress.storyboard in Resources */,
+				73CD740720E1CACA0050FF6C /* SelectCategory.storyboard in Resources */,
 				73B06D1C20E0D63A003AD6D0 /* ShopListMap.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,14 +668,17 @@
 				7E67A29F20343EDE00CCAC48 /* InputAddressDataStore.swift in Sources */,
 				7EBC2BD62032B19500C65F78 /* TopViewController.swift in Sources */,
 				73B06D0820E07979003AD6D0 /* ShopSearchUsecase.swift in Sources */,
+				73CD741020E1D1150050FF6C /* SelectCategoryDataStore.swift in Sources */,
 				73B06D2020E0E87A003AD6D0 /* ShopDetailViewController.swift in Sources */,
 				7E4E8A72203BF0D200CA0C90 /* Prefectures.swift in Sources */,
 				7E364C4B203C221900C762CD /* ShopCategory.swift in Sources */,
 				7E4E8A74203BFF1200CA0C90 /* AreaLarge.swift in Sources */,
 				7E579CED203BC9D000FE5C55 /* PrefecturesRequest.swift in Sources */,
+				73CD740C20E1CE290050FF6C /* SelectCategoryUsecase.swift in Sources */,
+				73CD740E20E1D0830050FF6C /* SelectCategoryRepository.swift in Sources */,
 				7EBC2BD42032B19500C65F78 /* AppDelegate.swift in Sources */,
 				7E4E8A78203C075600CA0C90 /* Area.swift in Sources */,
-				73BF494C20DCCC6600DAEE1C /* SearchAddressRepository.swift in Sources */,
+				73BF494C20DCCC6600DAEE1C /* SelectAddressRepository.swift in Sources */,
 				7E67A2822034064400CCAC48 /* BaseRequest.swift in Sources */,
 				7E4E8A7E203C111500CA0C90 /* CategorySmall.swift in Sources */,
 				7E02B09B2046AE850057D6F3 /* SplashViewController.swift in Sources */,
@@ -686,8 +702,8 @@
 				7E4E8A7A203C081300CA0C90 /* AreaRequest.swift in Sources */,
 				733C6E8220DC8AD0008E771A /* R.generated.swift in Sources */,
 				7E364C3F203C175100C762CD /* AreaMiddle.swift in Sources */,
-				7E579CEB203BC65700FE5C55 /* SearchAddressDataStore.swift in Sources */,
-				7E579CE9203BC54700FE5C55 /* SearchAddressUsecase.swift in Sources */,
+				7E579CEB203BC65700FE5C55 /* SelectAddressDataStore.swift in Sources */,
+				7E579CE9203BC54700FE5C55 /* SelectAddressUsecase.swift in Sources */,
 				7E4E8A82203C131F00CA0C90 /* CategorySmallRequest.swift in Sources */,
 				73B06D1920E0C063003AD6D0 /* CurrentLocationPresenter.swift in Sources */,
 				7E364C43203C1BD500C762CD /* AreaSubInfo.swift in Sources */,
@@ -747,6 +763,22 @@
 				73B06D1B20E0D63A003AD6D0 /* Base */,
 			);
 			name = ShopListMap.storyboard;
+			sourceTree = "<group>";
+		};
+		73CD740520E1CACA0050FF6C /* SelectCategory.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73CD740620E1CACA0050FF6C /* Base */,
+			);
+			name = SelectCategory.storyboard;
+			sourceTree = "<group>";
+		};
+		73CD740820E1CAEF0050FF6C /* SelectAddress.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73CD740920E1CAEF0050FF6C /* Base */,
+			);
+			name = SelectAddress.storyboard;
 			sourceTree = "<group>";
 		};
 		7E02B09C2046AF160057D6F3 /* Splash.storyboard */ = {

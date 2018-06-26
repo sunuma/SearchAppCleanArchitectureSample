@@ -47,6 +47,8 @@ struct ShopAPIParam: BaseParam {
     var lunch: Int?
     var desertBuffet: Int?
     var lunchBuffet: Int?
+    var categoryL: String?
+    var categoryS: String?
     
     //init() {}
     
@@ -66,6 +68,8 @@ struct ShopAPIParam: BaseParam {
         if let value = noSmoking { param[ShopParameterKey.noSmoking.rawValue] = value }
         if let value = desertBuffet { param[ShopParameterKey.desertBuffet.rawValue] = value }
         if let value = lunchBuffet { param[ShopParameterKey.lunchBuffet.rawValue] = value }
+        if let value = categoryL { param[ShopParameterKey.categoryL.rawValue] = value }
+        if let value = categoryS { param[ShopParameterKey.categoryS.rawValue] = value }
         return param
     }
 }

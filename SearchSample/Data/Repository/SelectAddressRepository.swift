@@ -9,12 +9,12 @@
 import Foundation
 import RxSwift
 
-protocol SearchAddressRepositoryProtocol {
+protocol SelectAddressRepositoryProtocol {
     func fetch() -> Observable<Prefectures>
 }
 
-class SearchAddressRepository: SearchAddressRepositoryProtocol {
-    let dataStore = SearchAddressDataStore()
+class SelectAddressRepository: SelectAddressRepositoryProtocol {
+    let dataStore = SelectAddressDataStore()
     
     func fetch() -> Observable<Prefectures> {
         return dataStore.fetch()

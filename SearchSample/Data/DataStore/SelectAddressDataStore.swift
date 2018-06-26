@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-struct SearchAddressDataStore {
+struct SelectAddressDataStore {
     func fetch() -> Observable<Prefectures> {
         return Observable.create({ (observer) -> Disposable in
             HttpsClient().request(PrefecturesRequest(), success: { decodable in

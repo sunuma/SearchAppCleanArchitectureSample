@@ -9,7 +9,7 @@
 import Foundation
 
 func initializeSelectAddress() -> SelectAddressPresenterProtcol {
-    let useCase = SearchAddressUsecase(repository: SearchAddressRepository())
+    let useCase = SelectAddressUsecase(repository: SelectAddressRepository())
     return SelectAddressPresenter(usecase: useCase)
 }
 
@@ -21,4 +21,9 @@ func initializeShopSearch() -> ShopSearchPresenterProtocol {
 func initializeCurrentLocation() -> CurrentLocationPresenterProtocol {
     let useCase = CurrentLocationUsecase()
     return CurrentLocationPresenter(usecase: useCase)
+}
+
+func initializeSelectCategory() -> SelectCategoryPresenterProtocol {
+    let useCase = SelectCategoryUsecase(repository: SelectCategoryRepository())
+    return SelectCategoryPresenter(usecase: useCase)
 }

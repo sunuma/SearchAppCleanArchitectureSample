@@ -7,84 +7,93 @@
 //
 
 import UIKit
+import RxSwift
 
-/**
- *
- */
-enum ShopSearchTextFeildType {
-    case keyword
-    case shopName
-}
-
-/**
- *
- */
-protocol SelectCategoryViewInput: class {
-    
-}
-
-/**
- *
- */
 class SelectCategoryViewController: UIViewController {
-    
     @IBOutlet weak var searchCategoryField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
-    fileprivate var currentInputType: ShopSearchTextFeildType = .keyword
+    private var selectCategory: SelectCategoryPresenterProtocol!
+    private let disposeBag = DisposeBag()
+    private var listData: [CategorySmallInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchCategoryField.placeholder = "2文字以上入力してください"
         searchCategoryField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-        //presenter.viewDidLoad(self)
+        selectCategory = initializeSelectCategory()
+        subscribe()
+        selectCategory.subscribe()
     }
     
-    @IBAction func onClickKeyword() {
-        currentInputType = .keyword
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
-    @IBAction func onClickShopName() {
-        currentInputType = .shopName
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        searchCategoryField.text = ""
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
 
 // MARK: - UITextFieldDelegate
 
 extension SelectCategoryViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let inputText = textField.text else {
-            return false
-        }
-        //presenter.searchInputText(inputText)
+        guard let searchWord = textField.text else { return true }
+        if searchWord.count <= 1 { return true }
+        let repaceWord = searchWord.replacingOccurrences(of: " ", with: ",").replacingOccurrences(of: "　", with: ",")
+        var param = ShopAPIParam()
+        param.freeWord = repaceWord
+        let vc = R.storyboard.shopList.instantiateInitialViewController()!
+        vc.initalize(param: param)
+        navigationController?.pushViewController(vc, animated: true)
         return true
     }
 }
 
 extension SelectCategoryViewController: UITableViewDelegate, UITableViewDataSource {
-    
     // MARK: - UITableViewDataSource
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.listData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        //presenter.setupTableCell(cell)
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.selectAddressCell, for: indexPath) {
+            cell.label.text = self.listData[indexPath.row].name
+            return cell
+        } else {
+            let cell = UITableViewCell()
+            cell.textLabel?.text = self.listData[indexPath.row].name
+            return cell
+        }
     }
     
     // MARK: - UITableViewDelegate
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //presenter.selectedTableCell(tableView, didSelectRowAt: indexPath)
+        let categoryInfo = self.listData[indexPath.row]
+        var param = ShopAPIParam()
+        param.categoryS = categoryInfo.code
+        param.categoryL = categoryInfo.parentCode
+        let vc = R.storyboard.shopList.instantiateInitialViewController()!
+        vc.initalize(param: param)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-extension SelectCategoryViewController: SelectCategoryViewInput {
-    
+extension SelectCategoryViewController {
+    func subscribe() {
+        // select category presenter subscribe
+        selectCategory.listData.subscribe(onNext: { [unowned self] result in
+            self.listData = result.info
+            self.tableView.reloadData()
+        }, onError: { error in
+            appDump(error)
+        }).disposed(by: disposeBag)
+    }
 }

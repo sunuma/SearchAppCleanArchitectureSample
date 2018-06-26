@@ -20,18 +20,16 @@ enum SelectSearchType {
     case category
 }
 
-let baseURL = "https://api.gnavi.co.jp"
-//
-let apiVersion = "20150630"
 /**
  * ぐるなび Web Service サイトのAPIテストツールから
  * http://api.gnavi.co.jp/api/tools/
+ * keyId にトークンの追加が必要
  */
+let baseURL = "https://api.gnavi.co.jp"
+let apiVersion = "20150630"
 let keyId = ""
 let formatJson = "json"
-
 let addressTextFieldMax = 150
-
 
 enum APIParameterKey: String {
     case keyId  = "keyid"
@@ -51,4 +49,6 @@ enum ShopParameterKey: String {
     case noSmoking      = "no_smoking"
     case desertBuffet   = "desert_buffet"
     case lunchBuffet    = "lunch_buffet"
+    case categoryL      = "category_l"
+    case categoryS      = "category_s"
 }

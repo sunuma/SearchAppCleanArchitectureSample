@@ -9,7 +9,6 @@
 import UIKit
 
 class TopViewController: UIViewController {
-    var searchAddress: SelectAddressPresenterProtcol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +24,11 @@ class TopViewController: UIViewController {
     }
     
     @IBAction func onClickSearchGroupCategory() {
-        
     }
     
     @IBAction func onClickSearchShopCategory() {
-        
+        let vc = R.storyboard.selectCategory.instantiateInitialViewController()!
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

@@ -19,6 +19,7 @@ class SelectAddressViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchAddressField.placeholder = "2文字以上入力してください"
         searchAddressField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
@@ -30,6 +31,11 @@ class SelectAddressViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        searchAddressField.text = ""
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,9 +53,14 @@ class SelectAddressViewController: UIViewController {
 
 extension SelectAddressViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let _ = textField.text else {
-            return false
-        }
+        guard let searchWord = textField.text else { return true }
+        if searchWord.count <= 1 { return true }
+        let repaceWord = searchWord.replacingOccurrences(of: " ", with: ",").replacingOccurrences(of: "　", with: ",")
+        var param = ShopAPIParam()
+        param.freeWord = repaceWord
+        let vc = R.storyboard.shopList.instantiateInitialViewController()!
+        vc.initalize(param: param)
+        navigationController?.pushViewController(vc, animated: true)
         return true
     }
 }

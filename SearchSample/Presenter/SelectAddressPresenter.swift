@@ -16,11 +16,11 @@ protocol SelectAddressPresenterProtcol {
 }
 
 class SelectAddressPresenter: SelectAddressPresenterProtcol {
-    private(set) var useCase: SearchAddressUsecaseProtocol
+    private(set) var useCase: SelectAddressUsecaseProtocol
     private(set) var listData = PublishSubject<Prefectures>()
     private(set) var isStartIndicator = PublishSubject<Bool>()
     
-    init(usecase: SearchAddressUsecaseProtocol) {
+    init(usecase: SelectAddressUsecaseProtocol) {
         self.useCase = usecase
     }
     
@@ -28,12 +28,12 @@ class SelectAddressPresenter: SelectAddressPresenterProtcol {
         let _ = useCase.fetch().subscribe(onNext: { [weak self] result in
             self?.listData.on(.next(result))
             self?.isStartIndicator.on(.next(false))
-            }, onError: { [weak self] error in
-                self?.listData.on(.error(error))
-            }, onCompleted: { [weak self] in
-                self?.listData.on(.completed)
-                self?.isStartIndicator.on(.completed)
-                appPrint("SelectAddressPresenter loadData completed.")
+        }, onError: { [weak self] error in
+            self?.listData.on(.error(error))
+        }, onCompleted: { [weak self] in
+            self?.listData.on(.completed)
+            self?.isStartIndicator.on(.completed)
+            appPrint("SelectAddressPresenter subscribe completed.")
         })
     }
     
