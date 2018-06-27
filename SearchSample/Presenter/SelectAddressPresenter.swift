@@ -19,13 +19,14 @@ class SelectAddressPresenter: SelectAddressPresenterProtcol {
     private(set) var useCase: SelectAddressUsecaseProtocol
     private(set) var listData = PublishSubject<Prefectures>()
     private(set) var isStartIndicator = PublishSubject<Bool>()
+    private let disposeBag = DisposeBag()
     
     init(usecase: SelectAddressUsecaseProtocol) {
         self.useCase = usecase
     }
     
     func subscribe() {
-        let _ = useCase.fetch().subscribe(onNext: { [weak self] result in
+        useCase.fetch().subscribe(onNext: { [weak self] result in
             self?.listData.on(.next(result))
             self?.isStartIndicator.on(.next(false))
         }, onError: { [weak self] error in
@@ -34,7 +35,7 @@ class SelectAddressPresenter: SelectAddressPresenterProtcol {
             self?.listData.on(.completed)
             self?.isStartIndicator.on(.completed)
             appPrint("SelectAddressPresenter subscribe completed.")
-        })
+        }).disposed(by: disposeBag)
     }
     
     deinit {}

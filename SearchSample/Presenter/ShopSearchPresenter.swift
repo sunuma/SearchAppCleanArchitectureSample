@@ -17,20 +17,21 @@ protocol ShopSearchPresenterProtocol {
 class ShopSearchPresenter: ShopSearchPresenterProtocol {
     private(set) var useCase: ShopSearchUsecaseProtocol
     private(set) var shopData = PublishSubject<Shop>()
+    private let disposeBag = DisposeBag()
     
     init(usecase: ShopSearchUsecaseProtocol) {
         self.useCase = usecase
     }
     
     func fetch(param: ShopAPIParam) {
-        let _ = useCase.fetch(param: param).subscribe(onNext: { [weak self] result in
+        useCase.fetch(param: param).subscribe(onNext: { [weak self] result in
             self?.shopData.on(.next(result))
         }, onError: { [weak self] error in
             self?.shopData.on(.error(error))
         }, onCompleted: { [weak self] in
             self?.shopData.on(.completed)
             appPrint("ShopSearchPresenter fetch completed.")
-        })
+        }).disposed(by: disposeBag)
     }
     
     deinit {}

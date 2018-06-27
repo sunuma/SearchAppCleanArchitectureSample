@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import RealmSwift
-
-class PrefecturesEntity: Object {
-    
-    @objc dynamic var code: String      = ""
-    @objc dynamic var name: String      = ""
-    @objc dynamic var areCode: String   = ""
-}
+//import RealmSwift
+//
+//class PrefecturesEntity: Object {
+//    
+//    @objc dynamic var code: String      = ""
+//    @objc dynamic var name: String      = ""
+//    @objc dynamic var areCode: String   = ""
+//}

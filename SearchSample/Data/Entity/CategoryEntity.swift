@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import RealmSwift
-
-class CategoryEntity: Object {
-    
-    @objc dynamic var categoryS: String = ""
-    @objc dynamic var categoryM: String = ""
-    @objc dynamic var categoryL: String = ""
-}
+//import RealmSwift
+//
+//class CategoryEntity: Object {
+//    
+//    @objc dynamic var categoryS: String = ""
+//    @objc dynamic var categoryM: String = ""
+//    @objc dynamic var categoryL: String = ""
+//}

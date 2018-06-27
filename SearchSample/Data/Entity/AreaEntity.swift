@@ -7,15 +7,15 @@
 //
 
 import Foundation
-import RealmSwift
-
-class AreaEntity: Object {
-    
-    @objc dynamic var code: String  = ""
-    @objc dynamic var name: String  = ""
-    @objc dynamic var codeM: String = ""
-    @objc dynamic var nameM: String = ""
-    @objc dynamic var codeL: String = ""
-    @objc dynamic var nameL: String = ""
-    
-}
+//import RealmSwift
+//
+//class AreaEntity: Object {
+//    
+//    @objc dynamic var code: String  = ""
+//    @objc dynamic var name: String  = ""
+//    @objc dynamic var codeM: String = ""
+//    @objc dynamic var nameM: String = ""
+//    @objc dynamic var codeL: String = ""
+//    @objc dynamic var nameL: String = ""
+//    
+//}
